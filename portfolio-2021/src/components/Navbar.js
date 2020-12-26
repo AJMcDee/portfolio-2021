@@ -30,7 +30,7 @@ function Navigation() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Top</Nav.Link>
+          <Nav.Link href="#top">Top</Nav.Link>
           <Nav.Link href="#AboutMe">About</Nav.Link>
           <Nav.Link href="#BlogFeed">BlogFeed</Nav.Link>
           <Nav.Link href="#link">Tech Stack</Nav.Link>

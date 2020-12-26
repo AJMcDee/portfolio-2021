@@ -4,6 +4,7 @@ import AboutMe from './components/AboutMe'
 import TechStack from './components/TechStack'
 import styled from 'styled-components'
 import ContactForm from './components/Contact'
+import BlogFeed from './components/BlogFeed'
 
 // Universal Styling
 
@@ -62,7 +63,7 @@ const HeaderH3 = styled.h3`
 function App() {
   
   return (
-    <div className="App">
+    <div className="App" id="top">
       <Navigation />
       <Header
         LinkBoxLink={LinkBoxLink}
@@ -72,8 +73,8 @@ function App() {
       <AboutMe HeaderH3={HeaderH3} />
       <TechStack HeaderH3={HeaderH3} />
       <ContactForm HeaderH3={HeaderH3} />
-      {/* <Projects />
-      <BlogFeed /> */}
+      {/* <Projects /> */}
+      <BlogFeed />
     </div>
   );
 }

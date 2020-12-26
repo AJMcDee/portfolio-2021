@@ -36,7 +36,7 @@ const [status, setStatus] = useState("")
 
     return (
       <ContactContainer>
-        <HeaderH3>Contact</HeaderH3>
+        <HeaderH3 id="ContactForm">Contact</HeaderH3>
         <StyledForm
           onSubmit={submitForm}
           action="https://formspree.io/f/xbjppknq"
@@ -48,10 +48,28 @@ const [status, setStatus] = useState("")
           <input type="email" name="email" id="email" />
 
           <label for="message">Message:</label>
-          <textarea type="text" name="message" id="message" cols="50" rows="6"/>
+          <textarea
+            type="text"
+            name="message"
+            id="message"
+            cols="50"
+            rows="6"
+          />
 
           {status === "SUCCESS" ? <p>Thank you!</p> : <button>Submit</button>}
-          {status === "ERROR" && <p>Oops! There was an error. Please contact me <a href="https://www.linkedin.com/in/annajmcdougall/" target="_blank">on LinkedIn</a> instead.</p>}
+          {status === "ERROR" && (
+            <p>
+              Oops! There was an error. Please contact me{" "}
+              <a
+                href="https://www.linkedin.com/in/annajmcdougall/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                on LinkedIn
+              </a>{" "}
+              instead.
+            </p>
+          )}
         </StyledForm>
       </ContactContainer>
     );

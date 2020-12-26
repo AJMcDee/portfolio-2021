@@ -12,7 +12,7 @@ function Header ({LinkBoxLink, HeaderH1, HeaderH2}) {
 
         <LinkBox>
           <LinkBoxLink href="#AboutMe">About</LinkBoxLink>
-          <LinkBoxLink href="">Contact</LinkBoxLink>
+          <LinkBoxLink href="#ContactForm">Contact</LinkBoxLink>
           <LinkBoxLink href="#TechStack">Tech Stack</LinkBoxLink>
           <LinkBoxLink href="">Projects</LinkBoxLink>
           <LinkBoxLink href="http://www.linkedin.com/in/annajmcdougall" target="_blank">LinkedIn</LinkBoxLink>
