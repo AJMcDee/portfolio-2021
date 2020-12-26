@@ -3,6 +3,7 @@ import Header from './components/Header'
 import AboutMe from './components/AboutMe'
 import TechStack from './components/TechStack'
 import styled from 'styled-components'
+import ContactForm from './components/Contact'
 
 // Universal Styling
 
@@ -20,6 +21,9 @@ const LinkBoxLink = styled.a`
     background-color: white;
     text-decoration: none;
   }
+   @media (max-width: 768px) {
+     font-size: 2rem;
+   }
 `;
 
 const HeaderH1 = styled.h1`
@@ -28,7 +32,7 @@ const HeaderH1 = styled.h1`
 
   -webkit-text-stroke: 3px black;
   text-shadow: 0px 0px 3px black;
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     font-size: 3rem;
 
     -webkit-text-stroke: 1px black;
@@ -41,7 +45,7 @@ const HeaderH2 = styled.h2`
   font-size: 3.5rem;
   -webkit-text-stroke: 2px black;
   text-shadow: 0px 0px 3px black;
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     font-size: 2.5rem;
     -webkit-text-stroke: 1px black;
     text-shadow: 0px 0px 1px black;
@@ -67,6 +71,7 @@ function App() {
       />
       <AboutMe HeaderH3={HeaderH3} />
       <TechStack HeaderH3={HeaderH3} />
+      <ContactForm HeaderH3={HeaderH3} />
       {/* <Projects />
       <BlogFeed /> */}
     </div>

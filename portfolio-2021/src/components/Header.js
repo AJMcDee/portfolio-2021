@@ -21,22 +21,28 @@ function Header ({LinkBoxLink, HeaderH1, HeaderH2}) {
 
           <LinkBoxLink href="">YouTube</LinkBoxLink>
         </LinkBox>
-      </HeaderDiv>
-    );
+      </HeaderDiv>);
 }
 
 const HeaderDiv = styled.header`
-  background-image: url(${bgImage});
+  /* background-image: url(${bgImage}); */
   background-size: cover;
-  min-height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5) 70%,
+      #20332d
+    ),
+    url(${bgImage});
+  background-position: center top;
+  min-height: 110vh;
+  padding-bottom: 20vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-bottom: 2rem;
   @media (max-width: 1000px) {
     text-align: center;
     justify-content: center;
-    align-items: flex-start;
+    align-items: space-around;
   }
 `;
 
@@ -52,7 +58,7 @@ flex-direction: column;
 
 const LinkBox = styled.div`
     min-height: 200px;
-    max-width: 20vw;
+    max-width: 30vw;
     min-width: 200px;
     border: 5px solid white;
     display: flex;

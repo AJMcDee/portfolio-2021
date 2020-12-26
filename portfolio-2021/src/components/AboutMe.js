@@ -3,8 +3,7 @@ import {faTwitterSquare, faGithubSquare, faLinkedin, faYoutubeSquare} from '@for
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function AboutMe({HeaderH3}) {
-    return (
-      <AboutMain id="AboutMe">
+    return (<AboutMain id="AboutMe">
         <AboutVideo>
           <iframe
 
@@ -73,14 +72,17 @@ function AboutMe({HeaderH3}) {
 }
 
 const AboutMain = styled.main`
-  padding: 3rem 0;
-  background-color: #20332d;
+  padding: 3rem 0 6rem 0;
+  background: linear-gradient( #20332d, 
+       #20332d 80%, #131331
+    );
   display: flex;
   justify-content: center;
   align-items: flex-start;
   @media (max-width: 768px) {
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
   }
 `;
 

@@ -78,27 +78,28 @@ return (
 }
 
 const TechStackContainer = styled.div`
-min-height: 100vh;
-    padding: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #131331;
-    @media (max-width: 1000px) {
+  min-height: 100vh;
+  padding: 2rem 0rem 10% 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(#131331, #131331 80%, #20332d);
+  @media (max-width: 1000px) {
     padding: 2rem;
-    }
-    `;
+  }
+`;
 
 const Logo = styled.div`
     display: flex;
-    width: 30%;
+    width: 22%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
     svg, img {
+      margin-bottom: 5px;
         color: white;
         font-size: 4rem;
         height: 4rem;
@@ -107,7 +108,7 @@ const Logo = styled.div`
 
 const LogoBox = styled.div`
     min-height: 200px;
-    max-width: 20vw;
+    max-width: 40vw;
     min-width: 200px;
     border: 5px solid white;
     display: flex;
