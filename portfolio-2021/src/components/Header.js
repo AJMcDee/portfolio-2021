@@ -16,7 +16,7 @@ function Header ({LinkBoxLink, HeaderH1, HeaderH2}) {
           <LinkBoxLink href="#TechStack">Tech Stack</LinkBoxLink>
           <LinkBoxLink href="">Projects</LinkBoxLink>
           <LinkBoxLink href="http://www.linkedin.com/in/annajmcdougall" target="_blank">LinkedIn</LinkBoxLink>
-          <LinkBoxLink href="">Blog Feed</LinkBoxLink>
+          <LinkBoxLink href="#BlogFeed">Blog Feed</LinkBoxLink>
           <LinkBoxLink href="http://www.github.com/AJMcDee" target="_blank">GitHub</LinkBoxLink>
 
           <LinkBoxLink href="">YouTube</LinkBoxLink>

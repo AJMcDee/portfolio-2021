@@ -63,7 +63,7 @@ const HeaderH3 = styled.h3`
 function App() {
   
   return (
-    <div className="App" id="top">
+    <AppContainer className="App" id="top">
       <Navigation />
       <Header
         LinkBoxLink={LinkBoxLink}
@@ -74,9 +74,15 @@ function App() {
       <TechStack HeaderH3={HeaderH3} />
       <ContactForm HeaderH3={HeaderH3} />
       {/* <Projects /> */}
-      <BlogFeed />
-    </div>
+      <BlogFeed HeaderH3={HeaderH3} LinkBoxLink={LinkBoxLink} />
+    </AppContainer>
   );
 }
 
+const AppContainer = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+
+`
 export default App;
