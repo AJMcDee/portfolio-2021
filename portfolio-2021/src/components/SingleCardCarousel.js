@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function SingleCardCarousel({ currentItem, handlePrev, handleNext }) {
+  console.log(currentItem);
   return (
     <CarouselContainer>
       <FontAwesomeIcon

@@ -14,10 +14,10 @@ const ProjectsContainer = styled.section`
   padding: 3rem 0;
   background-color: #343a40;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   @media (max-width: 768px) {
-    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
   }

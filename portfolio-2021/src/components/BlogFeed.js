@@ -12,41 +12,44 @@ function BlogFeed({ HeaderH3 }) {
   };
 
   const [currentItem, setCurrentItem] = useState({
-    item: { ...placeholder },
+    item: placeholder,
     index: 0,
   });
-  const [itemList, setItemList] = useState([currentItem]);
+  const [itemList, setItemList] = useState([{ item: placeholder, index: 0 }]);
 
-  const getPosts = async () => {
-    try {
-      await fetch("https://dev.to/api/articles?username=annajmcdougall")
-        .then((response) => response.json())
+  useEffect(() => {
+    async function getPosts() {
+      try {
+        await fetch("https://dev.to/api/articles?username=annajmcdougall")
+          .then((response) => response.json())
 
-        // Code to filter posts to more technical subjects
-        .then((data) => {
-          return data
-            .filter(
-              (post) =>
-                post.tags.includes("javascript") ||
-                post.tags.includes("html") ||
-                post.tags.includes("css")
-            )
-            .map((post) => {
-              return {
-                url: post.url,
-                title: post.title,
-                social_image: post.social_image,
-              };
-            });
-        })
-        .then((allPosts) => {
-          setItemList(allPosts);
-          setCurrentItem({ item: itemList[0], index: 0 });
-        });
-    } catch (err) {
-      console.error(err.message);
+          // Code to filter posts to more technical subjects
+          .then((data) => {
+            return data
+              .filter(
+                (post) =>
+                  post.tags.includes("javascript") ||
+                  post.tags.includes("html") ||
+                  post.tags.includes("css")
+              )
+              .map((post) => {
+                return {
+                  url: post.url,
+                  title: post.title,
+                  social_image: post.social_image,
+                };
+              });
+          })
+          .then((allPosts) => {
+            setItemList(allPosts);
+            setCurrentItem({ item: { ...allPosts[0] }, index: 0 });
+          });
+      } catch (err) {
+        console.error(err.message);
+      }
     }
-  };
+    getPosts();
+  }, []);
 
   function handleNext() {
     const currentIndex = currentItem.index;
@@ -66,10 +69,6 @@ function BlogFeed({ HeaderH3 }) {
       index: newIndex,
     });
   }
-
-  useEffect(() => {
-    getPosts();
-  }, []);
 
   return (
     <BlogFeedContainer>

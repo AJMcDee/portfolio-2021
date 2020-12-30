@@ -11,42 +11,44 @@ function YouTubeFeed({ HeaderH3 }) {
   };
 
   const [currentItem, setCurrentItem] = useState({
-    item: { ...placeholder },
+    item: placeholder,
     index: 0,
   });
-  const [itemList, setItemList] = useState([currentItem]);
+  const [itemList, setItemList] = useState([{ item: placeholder, index: 0 }]);
 
-  const getPosts = async () => {
-    try {
-      await fetch(
-        "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=PL6Xx4b2dsNzwAeTJ6QnlmYhvRlMgvxRNZ&key=AIzaSyCrsJw42t8ug4-LzAHGIHICbtbA1RLkS9g&part=snippet&maxResults=10"
-      )
-        .then((response) => response.json())
-        .then((dataOriginal) => {
-          console.log(dataOriginal.items[2]);
-          return dataOriginal;
-        })
-        .then((data) =>
-          data.items
-            .filter((item) => item.snippet.title !== "Private video")
-            .map((item) => {
-              console.log(item);
-              const url = `https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`;
-              const image = item.snippet.thumbnails.medium.url;
-              const title = item.snippet.title.split("|")[0];
-              console.log(url, image, title);
-              return { url: url, social_image: image, title: title };
-            })
+  useEffect(() => {
+    async function getPosts() {
+      try {
+        await fetch(
+          "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=PL6Xx4b2dsNzwAeTJ6QnlmYhvRlMgvxRNZ&key=AIzaSyCrsJw42t8ug4-LzAHGIHICbtbA1RLkS9g&part=snippet&maxResults=10"
         )
-        .then((allPosts) => {
-          console.log(allPosts);
-          setItemList(allPosts);
-          setCurrentItem({ item: itemList[0], index: 0 });
-        });
-    } catch (err) {
-      console.error(err.message);
+          .then((response) => response.json())
+          .then((dataOriginal) => {
+            console.log(dataOriginal.items[2]);
+            return dataOriginal;
+          })
+          .then((data) =>
+            data.items
+              .filter((item) => item.snippet.title !== "Private video")
+              .map((item) => {
+                const url = `https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`;
+                const image = item.snippet.thumbnails.medium.url;
+                const title = item.snippet.title.split("|")[0];
+
+                return { url: url, social_image: image, title: title };
+              })
+          )
+          .then((allPosts) => {
+            setItemList(allPosts);
+            setCurrentItem({ item: { ...allPosts[0] }, index: 0 });
+          });
+      } catch (err) {
+        console.error(err.message);
+      }
     }
-  };
+
+    getPosts();
+  }, []);
 
   function handleNext() {
     const currentIndex = currentItem.index;
@@ -61,10 +63,6 @@ function YouTubeFeed({ HeaderH3 }) {
       currentIndex === 0 ? itemList.length - 1 : currentIndex - 1;
     setCurrentItem({ item: { ...itemList[newIndex] }, index: newIndex });
   }
-
-  useEffect(() => {
-    getPosts();
-  }, []);
 
   return (
     <BlogFeedContainer>
