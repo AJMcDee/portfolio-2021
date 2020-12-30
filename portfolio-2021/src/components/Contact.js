@@ -1,10 +1,9 @@
-import React, {useState} from "react";
-import styled from 'styled-components';
-
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const ContactContainer = styled.div`
   padding: 3rem 0 8rem 0;
-  background: linear-gradient(#20332d, #20332d 80%, #131331);
+  background-color: #343a40;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,49 +29,42 @@ const StyledForm = styled.form`
 
 // Form template from Formspree.com
 
-function ContactForm({HeaderH3}) {
+function ContactForm({ HeaderH3 }) {
+  const [status, setStatus] = useState("");
 
-const [status, setStatus] = useState("")
+  return (
+    <ContactContainer>
+      <HeaderH3 id="ContactForm">Contact</HeaderH3>
+      <StyledForm
+        onSubmit={submitForm}
+        action="https://formspree.io/f/xbjppknq"
+        method="POST"
+      >
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" />
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" />
 
-    return (
-      <ContactContainer>
-        <HeaderH3 id="ContactForm">Contact</HeaderH3>
-        <StyledForm
-          onSubmit={submitForm}
-          action="https://formspree.io/f/xbjppknq"
-          method="POST"
-        >
-          <label for="name">Name: </label>
-          <input type="text" name="name" id="name" />
-          <label for="email">Email: </label>
-          <input type="email" name="email" id="email" />
+        <label for="message">Message:</label>
+        <textarea type="text" name="message" id="message" cols="50" rows="6" />
 
-          <label for="message">Message:</label>
-          <textarea
-            type="text"
-            name="message"
-            id="message"
-            cols="50"
-            rows="6"
-          />
-
-          {status === "SUCCESS" ? <p>Thank you!</p> : <button>Submit</button>}
-          {status === "ERROR" && (
-            <p>
-              Oops! There was an error. Please contact me{" "}
-              <a
-                href="https://www.linkedin.com/in/annajmcdougall/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                on LinkedIn
-              </a>{" "}
-              instead.
-            </p>
-          )}
-        </StyledForm>
-      </ContactContainer>
-    );
+        {status === "SUCCESS" ? <p>Thank you!</p> : <button>Submit</button>}
+        {status === "ERROR" && (
+          <p>
+            Oops! There was an error. Please contact me{" "}
+            <a
+              href="https://www.linkedin.com/in/annajmcdougall/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              on LinkedIn
+            </a>{" "}
+            instead.
+          </p>
+        )}
+      </StyledForm>
+    </ContactContainer>
+  );
 
   function submitForm(ev) {
     ev.preventDefault();
@@ -94,4 +86,4 @@ const [status, setStatus] = useState("")
   }
 }
 
-export default ContactForm
+export default ContactForm;
