@@ -78,7 +78,7 @@ function TechStack() {
 }
 
 const TechStackContainer = styled.div`
-  padding: 2rem 0rem 10% 0rem;
+  padding: 3rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
