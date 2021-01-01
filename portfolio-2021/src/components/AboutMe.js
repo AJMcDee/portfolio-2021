@@ -73,8 +73,9 @@ function AboutMe() {
 }
 
 const AboutMain = styled.main`
+  box-shadow: 0px 0px 30px #b87700;
   padding: 3rem 0;
-  background-color: #343a40;
+  background-color: #131529;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -126,7 +127,7 @@ const SocialIcons = styled.div`
   }
 
   svg:hover {
-    color: #be93fc;
+    color: #8d5a97;
     cursor: pointer;
   }
 `;
