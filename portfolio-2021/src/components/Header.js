@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import bgImage from "../img/bg-purple-abstract.jpg";
+import { HeaderH2, HeaderH1 } from "./elements/Headers";
 
-function Header({ LinkBoxLink, HeaderH1, HeaderH2 }) {
+function Header({ LinkBoxLink }) {
   return (
     <HeaderDiv>
       <HoldText>

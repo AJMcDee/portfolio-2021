@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { HeaderH2 } from "./elements/Headers";
 
 const ContactContainer = styled.div`
   padding: 3rem 0 8rem 0;
@@ -34,7 +35,7 @@ function ContactForm({ HeaderH3 }) {
 
   return (
     <ContactContainer>
-      <HeaderH3 id="ContactForm">Contact</HeaderH3>
+      <HeaderH2 id="ContactForm">Contact</HeaderH2>
       <StyledForm
         onSubmit={submitForm}
         action="https://formspree.io/f/xbjppknq"

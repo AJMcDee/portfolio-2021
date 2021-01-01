@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import SingleCardCarousel from "./SingleCardCarousel";
 import ItemLink from "./elements/ItemLink";
+import { HeaderH3 } from "./elements/Headers";
 
-function YouTubeFeed({ HeaderH3 }) {
+function YouTubeFeed() {
   const placeholder = {
     url: "https://www.youtube.com/watch?v=5o4P8lESTF0",
     social_image: "https://i.ytimg.com/vi/5o4P8lESTF0/mqdefault.jpg",

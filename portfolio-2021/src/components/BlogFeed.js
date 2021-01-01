@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import SingleCardCarousel from "./SingleCardCarousel";
 import ItemLink from "./elements/ItemLink";
+import { HeaderH3 } from "./elements/Headers";
 
-function BlogFeed({ HeaderH3 }) {
+function BlogFeed() {
   const placeholder = {
     url: "https://dev.to/annajmcdougall/5-tips-for-learning-grid-46l2",
     social_image:

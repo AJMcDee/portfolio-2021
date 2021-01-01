@@ -8,6 +8,16 @@ import SocialFeed from "./components/SocialFeed";
 import bgImage from "./img/bg-purple-abstract.jpg";
 import Projects from "./components/Projects";
 
+// TODO:
+// - Create Project Card component
+// - Add 3 projects
+// - Fix social media cards on x-small devices
+// - Update navigation links (both in header and navbar)
+// - Clean up styling (ensure consistency)
+// - Reorder imports to make sense
+// - Remove console logs
+// - Comment code
+
 // Universal Styling
 
 const LinkBoxLink = styled.a`
@@ -29,68 +39,17 @@ const LinkBoxLink = styled.a`
   }
 `;
 
-const HeaderH1 = styled.h1`
-  font-family: "Staatliches", sans-serif;
-  color: white;
-  font-size: 8rem;
-  padding-bottom: 1rem;
-
-  -webkit-text-stroke: 3px black;
-  text-shadow: 0px 0px 3px black;
-  @media (max-width: 768px) {
-    font-size: 6.5rem;
-    -webkit-text-stroke: 2px black;
-    text-shadow: 0px 0px 2px black;
-  }
-  @media (max-width: 360px) {
-    font-size: 4rem;
-    -webkit-text-stroke: 1px black;
-    text-shadow: 0px 0px 1px black;
-  }
-`;
-
-const HeaderH2 = styled.h2`
-  color: white;
-  font-size: 3.5rem;
-  padding: 1rem;
-  -webkit-text-stroke: 2px black;
-  text-shadow: 0px 0px 3px black;
-  @media (max-width: 768px) {
-    font-size: 3rem;
-    -webkit-text-stroke: 1px black;
-    text-shadow: 0px 0px 1px black;
-  }
-`;
-
-const HeaderH3 = styled.h3`
-  color: white;
-  font-size: 3rem;
-  -webkit-text-stroke: 1px black;
-  text-shadow: 0px 0px 1px black;
-  @media (max-width: 768px) {
-    font-size: 2.5rem;
-  }
-`;
-
 function App() {
   return (
     <AppContainer className="App" id="top">
       <Navigation />
-      <Header
-        LinkBoxLink={LinkBoxLink}
-        HeaderH1={HeaderH1}
-        HeaderH2={HeaderH2}
-      />
-      <AboutMe HeaderH3={HeaderH3} />
-      <TechStack HeaderH3={HeaderH3} />
+      <Header LinkBoxLink={LinkBoxLink} />
+      <AboutMe />
+      <TechStack />
 
-      <Projects HeaderH3={HeaderH3} />
-      <SocialFeed
-        HeaderH2={HeaderH2}
-        HeaderH3={HeaderH3}
-        LinkBoxLink={LinkBoxLink}
-      />
-      <ContactForm HeaderH3={HeaderH3} />
+      <Projects />
+      <SocialFeed />
+      <ContactForm />
     </AppContainer>
   );
 }

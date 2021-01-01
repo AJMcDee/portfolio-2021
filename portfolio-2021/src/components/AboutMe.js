@@ -6,8 +6,9 @@ import {
   faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { HeaderH2 } from "./elements/Headers";
 
-function AboutMe({ HeaderH3 }) {
+function AboutMe() {
   return (
     <AboutMain id="AboutMe">
       <AboutVideo>
@@ -20,7 +21,7 @@ function AboutMe({ HeaderH3 }) {
         />
       </AboutVideo>
       <AboutInfo>
-        <HeaderH3>About Me</HeaderH3>{" "}
+        <HeaderH2>About Me</HeaderH2>
         <AboutText>
           <p>
             I am a passionate, high-energy, and friendly developer who was born
@@ -95,7 +96,7 @@ const AboutInfo = styled.div`
 `;
 
 const AboutText = styled.p`
-  padding: 2rem 0;
+  padding: 0;
 `;
 const AboutVideo = styled.div`
   text-align: center;

@@ -3,14 +3,15 @@ import BlogFeed from "./BlogFeed";
 import YouTubeFeed from "./YouTubeFeed";
 import React from "react";
 import { Timeline } from "react-twitter-widgets";
+import { HeaderH2, HeaderH3 } from "./elements/Headers";
 
-function SocialFeed({ HeaderH2, HeaderH3 }) {
+function SocialFeed() {
   return (
     <SocialFeedContainer>
       <HeaderH2>Social Media</HeaderH2>
       <SocialFeedBox>
-        <BlogFeed HeaderH3={HeaderH3} />
-        <YouTubeFeed HeaderH3={HeaderH3} />
+        <BlogFeed />
+        <YouTubeFeed />
         <section>
           <HeaderH3>Twitter Feed</HeaderH3>
           <Timeline
@@ -20,7 +21,7 @@ function SocialFeed({ HeaderH2, HeaderH3 }) {
             }}
             options={{
               theme: "dark",
-              height: 250,
+              height: 200,
             }}
           />
         </section>
@@ -45,7 +46,6 @@ const SocialFeedBox = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: baseline;
   background: black;
   padding: 2rem;
   & > section {
@@ -58,7 +58,7 @@ const SocialFeedBox = styled.div`
     padding: 2rem;
     margin: 1rem;
     height: 360px;
-    width: 340px;
+    width: 360px;
   }
   @media (max-width: 1000px) {
     max-width: 90vw;

@@ -3,6 +3,7 @@ import mongoDb from "../img/mongoDb.png";
 import webpackLogo from "../img/webpackLogo.png";
 import expressLogo from "../img/expressLogo.png";
 import jqueryLogo from "../img/jqueryLogo.png";
+import { HeaderH2 } from "./elements/Headers";
 
 import {
   faHtml5,
@@ -16,10 +17,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function TechStack({ HeaderH3 }) {
+function TechStack() {
   return (
     <TechStackContainer>
-      <HeaderH3 id="TechStack">Tech Stack</HeaderH3>
+      <HeaderH2 id="TechStack">Tech Stack</HeaderH2>
       <LogoBox>
         <Logo>
           <FontAwesomeIcon title="HTML5 Logo" icon={faHtml5} />

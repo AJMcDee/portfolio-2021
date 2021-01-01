@@ -1,11 +1,27 @@
 import React from "react";
 import styled from "styled-components";
+import { HeaderH2 } from "./elements/Headers";
+import ProjectCard from "./ProjectCard";
 
-function Projects({ HeaderH3 }) {
+function Projects() {
   return (
     <ProjectsContainer>
-      <HeaderH3 id="ContactForm">Project Showcase</HeaderH3>
-      <ProjectCardBox></ProjectCardBox>
+      <HeaderH2 id="ContactForm">Project Showcase</HeaderH2>
+
+      <ProjectCard
+        title="Test Project"
+        projectLink="http://www.google.com"
+        image="https://res.cloudinary.com/practicaldev/image/fetch/s--tb_1ZR-M--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/690735yujtzn5a6e33sk.jpg"
+        description="Closure: it's not only what you need when a relationship ends, it's also something you need to understand when coding in JavaScript. Unfortunately, it can be a tough thing to explain to those new to programming, and since I only recently feel like closure has 'clicked' for me, I've decided to write a short article to explain it in ways other newer coders can understand. I hope this helps someone out there!"
+        githubLink="http://www.google.com"
+      />
+      <ProjectCard
+        title="Test Project"
+        projectLink="http://www.google.com"
+        image="https://res.cloudinary.com/practicaldev/image/fetch/s--tb_1ZR-M--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/690735yujtzn5a6e33sk.jpg"
+        description="Closure: it's not only what you need when a relationship ends, it's also something you need to understand when coding in JavaScript. Unfortunately, it can be a tough thing to explain to those new to programming, and since I only recently feel like closure has 'clicked' for me, I've decided to write a short article to explain it in ways other newer coders can understand. I hope this helps someone out there!"
+        githubLink="http://www.google.com"
+      />
     </ProjectsContainer>
   );
 }
@@ -24,31 +40,5 @@ const ProjectsContainer = styled.section`
 `;
 
 // Ensure main CSS (not section styling)  matches the SocialFeedBox from SocialFeed component
-const ProjectCardBox = styled.div`
-  min-height: 200px;
-  min-width: 50vw;
-  max-width: 80vw;
-  min-width: 200px;
-  border: 5px solid white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: baseline;
-  background: black;
-  padding: 2rem;
-  & > section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    border: 2px solid white;
-    padding: 2rem;
-    margin: 1rem;
-  }
-  @media (max-width: 1000px) {
-    max-width: 90vw;
-  }
-`;
 
 export default Projects;
