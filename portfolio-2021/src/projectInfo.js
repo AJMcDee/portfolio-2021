@@ -43,7 +43,7 @@ const projectInfo = {
       githubLink: "https://github.com/AJMcDee/react-music-player",
       image: beatsPreview,
       description:
-        "A minimalist music player with a selection of chillhop tracks, built in React with styling in Sass. Recent features include dark mode toggle and 'pulse' animation effect when a song is playing",
+        "A minimalist music player with a selection of chillhop tracks, built in React with styling in Sass. Recent features include dark mode toggle and 'pulse' animation effect when a song is playing.",
       stack: ["HTML", "Sass", "JavaScript", "React", "npm"],
     },
   ],
