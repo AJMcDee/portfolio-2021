@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { HeaderH2 } from "./elements/Headers";
-import StyledLink from "./elements/StyledLink";
+import StyledButton from "./elements/StyledButton";
 
 // Form template from Formspree.com
 
@@ -27,7 +27,7 @@ function ContactForm() {
         {status === "SUCCESS" ? (
           <p>Thank you!</p>
         ) : (
-          <StyledLink>Submit</StyledLink>
+          <StyledButton>Submit</StyledButton>
         )}
         {status === "ERROR" && (
           <p>
@@ -78,9 +78,12 @@ const ContactContainer = styled.div`
 `;
 
 const StyledForm = styled.form`
+  background-color: black;
+  border: 4px solid white;
+  padding: 2rem;
   display: flex;
-  max-width: 40vw;
-  margin-top: 2rem;
+  width: 80vw;
+  margin-top: 1rem;
   flex-direction: column;
   align-items: center;
   input,

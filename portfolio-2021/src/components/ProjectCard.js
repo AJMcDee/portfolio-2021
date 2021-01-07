@@ -7,25 +7,28 @@ function ProjectCard({
   title,
   projectLink,
   githubLink,
-  image,
+  imagePortrait,
+  imageLandscape,
   description,
   stack,
 }) {
+  let image = window.matchMedia("(min-width: 768px)").matches
+    ? imageLandscape
+    : imagePortrait;
   return (
     <ProjectCardBox>
       <StyledCard>
+        <HeaderH3>{title}</HeaderH3>
+        <LogoBox>
+          {stack.map((item) => {
+            return <StackLogo stack={item} />;
+          })}
+        </LogoBox>
         <ImageLink href={projectLink} target="_blank" rel="noreferrer">
           <CardImage src={image} />
         </ImageLink>
         <TextBox>
-          <HeaderH3>{title}</HeaderH3>
-          <LogoBox>
-            {stack.map((item) => {
-              return <StackLogo stack={item} />;
-            })}
-          </LogoBox>
           <p>{description}</p>
-
           <ButtonBox>
             <StyledLink href={projectLink} target="_blank" rel="noreferrer">
               View Deployment
@@ -43,7 +46,7 @@ function ProjectCard({
 const ProjectCardBox = styled.div`
   min-height: 200px;
   min-width: 50vw;
-  max-width: 80vw;
+  width: 80vw;
   min-width: 200px;
   border: 5px solid white;
   margin-bottom: 2rem;
@@ -66,13 +69,13 @@ const ProjectCardBox = styled.div`
     padding: 2rem;
     margin: 1rem;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
     max-width: 90vw;
   }
 `;
 
 const TextBox = styled.div`
-  margin-top: 0;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -100,18 +103,29 @@ const LogoBox = styled.p`
 `;
 
 const ButtonBox = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   * {
-    margin: 2rem 2rem 2rem 0rem;
+    margin: 5px;
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
 `;
 
 const StyledCard = styled.div`
   width: clamp(300px, 60vw, 80vw);
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  @media (max-width: 768px) {
-    grid-template-columns: 100%;
-    grid-template-rows: 300px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
   }
 `;
 
@@ -119,8 +133,10 @@ const ImageLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-right: 2rem;
-  margin-top: 8px;
+  @media (min-width: 768px) {
+    margin-right: 2rem;
+    margin-top: 8px;
+  }
 `;
 
 const CardImage = styled.img`

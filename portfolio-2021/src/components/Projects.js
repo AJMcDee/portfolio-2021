@@ -14,7 +14,8 @@ function Projects() {
           <ProjectCard
             title={project.title}
             projectLink={project.projectLink}
-            image={project.image}
+            imageLandscape={project.imageLandscape}
+            imagePortrait={project.imagePortrait}
             description={project.description}
             githubLink={project.githubLink}
             stack={project.stack}
@@ -29,15 +30,11 @@ const ProjectsContainer = styled.section`
   padding: 3rem 0;
   box-shadow: 0px 0px 30px #b87700;
   background-color: #131529;
-
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media (max-width: 768px) {
-    align-items: center;
-    justify-content: flex-start;
-  }
 `;
 
 // Ensure main CSS (not section styling)  matches the SocialFeedBox from SocialFeed component

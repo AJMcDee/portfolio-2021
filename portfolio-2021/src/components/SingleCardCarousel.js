@@ -1,4 +1,3 @@
-import Card from "react-bootstrap/Card";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,13 +12,12 @@ function SingleCardCarousel({ currentItem, handlePrev, handleNext }) {
       <FontAwesomeIcon
         title="Previous Post"
         icon={faChevronLeft}
-        style={{ color: "white", fontSize: "2rem" }}
+        style={{ color: "white", fontSize: "1rem" }}
         onClick={handlePrev}
       />
-      <Card style={{ backgroundColor: "black", margin: "1rem" }}>
+      <Card>
         <a href={currentItem.item.url} target="_blank" rel="noreferrer">
-          <Card.Img
-            variant="top"
+          <CardImg
             alt={currentItem.item.title}
             src={currentItem.item.social_image}
             style={{ cursor: "pointer" }}
@@ -31,12 +29,28 @@ function SingleCardCarousel({ currentItem, handlePrev, handleNext }) {
       <FontAwesomeIcon
         title="Next Post"
         icon={faChevronRight}
-        style={{ color: "white", fontSize: "2rem" }}
+        style={{ color: "white", fontSize: "1rem" }}
         onClick={handleNext}
       />
     </CarouselContainer>
   );
 }
+
+const Card = styled.div`
+  background-color: "black";
+  margin: 1rem;
+`;
+
+const CardImg = styled.img`
+  max-height: 120px;
+  max-width: 200px;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 400px;
+    height: 230px;
+    max-height: unset;
+    max-width: unset;
+  }
+`;
 
 const CarouselContainer = styled.div`
   display: flex;
@@ -44,6 +58,9 @@ const CarouselContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 320px;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 700px;
+  }
 `;
 
 export default SingleCardCarousel;

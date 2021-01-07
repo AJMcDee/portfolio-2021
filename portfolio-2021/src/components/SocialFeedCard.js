@@ -5,7 +5,6 @@ import ItemLink from "./elements/ItemLink";
 
 function BlogFeed({ HeaderH3, LinkBoxLink }) {
   const [itemList, setItemList] = useState([]);
-  const [itemsReady, setItemsReady] = useState(false);
   const getPosts = async () => {
     try {
       await fetch("https://dev.to/api/articles?username=annajmcdougall")

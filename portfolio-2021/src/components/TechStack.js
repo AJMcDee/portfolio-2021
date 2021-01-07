@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { HeaderH2 } from "./elements/Headers";
 
 // Tech Stack Logos
-import mongoDb from "../img/mongoDb.png";
-import webpackLogo from "../img/webpackLogo.png";
-import expressLogo from "../img/expressLogo.png";
-import jqueryLogo from "../img/jqueryLogo.png";
+import mongoDb from "../img/logos/mongoDb.png";
+import webpackLogo from "../img/logos/webpackLogo.png";
+import expressLogo from "../img/logos/expressLogo.png";
+import jqueryLogo from "../img/logos/jqueryLogo.png";
 
 import {
   faHtml5,
@@ -85,7 +85,7 @@ const TechStackContainer = styled.div`
   align-items: center;
   justify-content: center;
   /* background: linear-gradient(#131331, #131331 80%, #20332d);
-  @media (max-width: 1000px) { */
+  @media (max-width: 1200px) { */
   padding: 3rem;
 `;
 
@@ -108,16 +108,16 @@ const Logo = styled.div`
 
 const LogoBox = styled.div`
   min-height: 200px;
-  max-width: 40vw;
-  min-width: 200px;
+  width: 80vw;
+
   border: 5px solid white;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   background: black;
-  @media (max-width: 1000px) {
-    max-width: 90vw;
+  @media (min-width: 1200px) {
+    width: 40vw;
   }
   margin: 2rem 0;
 `;

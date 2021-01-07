@@ -12,6 +12,7 @@ function Navigation() {
       setNavExpand("none");
     }
   };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, []);
@@ -28,7 +29,6 @@ function Navigation() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#top">Top</Nav.Link>
           <Nav.Link href="#AboutMe">About</Nav.Link>
           <Nav.Link href="#TechStack">Tech Stack</Nav.Link>
           <Nav.Link href="#ProjectShowcase">Projects</Nav.Link>

@@ -39,14 +39,17 @@ const LinkBoxLink = styled.a`
   color: white;
   flex-grow: 1;
   text-align: center;
-  font-size: 3rem;
+  font-size: 1.2rem;
   &:hover {
     color: black;
     background-color: white;
     text-decoration: none;
   }
-  @media (max-width: 768px) {
-    font-size: 2rem;
+  @media (min-width: 360px) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 3rem;
   }
 `;
 
@@ -54,18 +57,22 @@ const HeaderDiv = styled.header`
   background-size: cover;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(${bgImage});
-  background-position: center top;
   background-repeat: no-repeat;
   min-height: 100vh;
   padding-bottom: 10vh;
   display: flex;
+  flex-direction: column;
+  text-align: center;
   justify-content: space-around;
   align-items: center;
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: space-around;
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @media (min-height: 1080px) {
+    min-height: 1080px;
   }
 `;
 
