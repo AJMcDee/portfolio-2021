@@ -95,6 +95,7 @@ const AboutBox = styled.div`
   @media (min-width: 1200px) {
     max-width: 80vw;
     flex-direction: row;
+    align-items: flex-start;
   }
 `;
 
@@ -106,12 +107,6 @@ const AboutMain = styled.main`
   align-items: center;
   justify-content: flex-start;
   display: flex;
-
-  @media (min-width: 1200px) {
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: row;
-  }
 `;
 
 const AboutInfo = styled.div`
@@ -124,10 +119,8 @@ const AboutInfo = styled.div`
 `;
 
 const AboutText = styled.p`
-  padding: 1rem;
   font-size: 1em;
   @media (min-width: 768px) {
-    padding: 2rem;
     font-size: 1.2em;
   }
 `;
@@ -135,12 +128,12 @@ const AboutVideo = styled.div`
   text-align: center;
 
   iframe {
-    width: 300px;
-    height: 180px;
-    /* @media (min-width: 360px) {
-      width: 350px;
-      height: 190px;
-    } */
+    width: 200px;
+    height: 120px;
+    @media (min-width: 360px) {
+      width: 300px;
+      height: 180px;
+    }
     @media (min-width: 768px) {
       width: 500px;
       height: 360px;
@@ -156,7 +149,7 @@ const SocialIcons = styled.div`
   text-align: right;
   height: 100px;
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   a {
     margin: 10px;
     color: white;
@@ -165,6 +158,9 @@ const SocialIcons = styled.div`
   svg:hover {
     color: #8d5a97;
     cursor: pointer;
+  }
+  @media (min-width: 360px) {
+    font-size: 3rem;
   }
 `;
 

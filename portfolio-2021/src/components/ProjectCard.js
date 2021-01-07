@@ -18,7 +18,7 @@ function ProjectCard({
   return (
     <ProjectCardBox>
       <StyledCard>
-        <HeaderH3>{title}</HeaderH3>
+        <HeaderH3 style={{ gridArea: "header" }}>{title}</HeaderH3>
         <LogoBox>
           {stack.map((item) => {
             return <StackLogo stack={item} />;
@@ -75,6 +75,7 @@ const ProjectCardBox = styled.div`
 `;
 
 const TextBox = styled.div`
+  grid-area: text;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
@@ -91,6 +92,7 @@ const TextBox = styled.div`
 `;
 
 const LogoBox = styled.p`
+  grid-area: logos;
   height: 50px;
   display: flex;
   flex-wrap: nowrap;
@@ -124,19 +126,23 @@ const StyledCard = styled.div`
   justify-content: center;
 
   @media (min-width: 1200px) {
+    width: 95%;
     display: grid;
     grid-template-columns: 2fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "image header"
+      "image logos"
+      "image text";
+    place-items: center;
   }
 `;
 
 const ImageLink = styled.a`
+  grid-area: image;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  @media (min-width: 768px) {
-    margin-right: 2rem;
-    margin-top: 8px;
-  }
 `;
 
 const CardImage = styled.img`

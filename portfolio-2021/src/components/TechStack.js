@@ -84,6 +84,7 @@ const TechStackContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   /* background: linear-gradient(#131331, #131331 80%, #20332d);
   @media (max-width: 1200px) { */
   padding: 3rem;

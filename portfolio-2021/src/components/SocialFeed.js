@@ -66,8 +66,10 @@ const TwitterFeed = styled.section`
   justify-content: center;
   align-content: center;
   text-align: center;
-  height: 300px;
-  width: 270px;
+  @media (min-width: 360px) {
+    height: 300px;
+    width: 270px;
+  }
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 400px;
     height: unset;
