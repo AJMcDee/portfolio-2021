@@ -18,7 +18,7 @@ const projectInfo = {
       imageLandscape: portfolioPreview,
       imagePortrait: portfolioPreviewPortrait,
       description:
-        "This website: built in React using styled components, and featuring self-built social carousels and parallax effect.",
+        "This website: built in React using styled components, and featuring self-built social carousels and parallax effect. Built using functional components only, covering useState, useEffect, and useLayoutEffect hooks.",
       stack: ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "npm"],
     },
     {
