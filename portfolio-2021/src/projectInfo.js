@@ -1,30 +1,10 @@
 import tttPreview from "./img/tic-tac-toe.png";
-import lprPreview from "./img/lapiazza.png";
+import bbPreview from "./img/bennys.png";
 import portfolioPreview from "./img/portfolio-page.png";
-import pomodoroPreview from "./img/pomodoro.png";
+import beatsPreview from "./img/beats.png";
 
 const projectInfo = {
   projects: [
-    {
-      projectId: 1,
-      title: "Tic-Tac-Toe",
-      projectLink: "https://ajmcdee.github.io/TicTacToe/",
-      githubLink: "https://github.com/AJMcDee/TicTacToe",
-      image: tttPreview,
-      description:
-        "A classic Tic-Tac-Toe game with the option of two players or vs the Computer AI.",
-      stack: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-      projectId: 2,
-      title: "La Piazza Restaurant",
-      projectLink: "https://ajmcdee.github.io/restaurantReactRefactor/",
-      githubLink: "https://github.com/AJMcDee/restaurantReactRefactor",
-      image: lprPreview,
-      description:
-        "A small refactoring project featuring a restaurant landing page, menu, and booking form.",
-      stack: ["HTML", "CSS", "JavaScript", "React", "npm"],
-    },
     {
       projectId: 3,
       title: "Portfolio Page",
@@ -36,13 +16,35 @@ const projectInfo = {
       stack: ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "npm"],
     },
     {
-      projectId: 4,
-      title: "Pomodoro Clock",
-      projectLink: "https://ajmcdee.github.io/pomodoroClock/",
-      githubLink: "https://github.com/AJMcDee/pomodoroClock",
-      image: pomodoroPreview,
-      description: `Simple Pomodoro Clock with tomato motif and splat sound effect.`,
+      projectId: 1,
+      title: "Tic-Tac-Toe",
+      projectLink: "https://ajmcdee.github.io/TicTacToe/",
+      githubLink: "https://github.com/AJMcDee/TicTacToe",
+      image: tttPreview,
+      description: `A classic Tic-Tac-Toe game with the option of two players or vs the Computer AI. 
+        
+        This was one of my first JavaScript projects and I programmed the logic entirely alone, using a series of arrays to evaluate the relative positioning of each move.`,
       stack: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      projectId: 2,
+      title: "Benny's Burger",
+      projectLink: "https://ajmcdee.github.io/BennysBurgers-Bootstrap/",
+      githubLink: "https://github.com/AJMcDee/BennysBurgers-Bootstrap",
+      image: bbPreview,
+      description:
+        "An example business page for a small burger restaurant, based on a specified design. The goal of this project was to effectively utilise Bootstrap for a whole-page layout, combining it with Sass mix-ins and custom styling to achieve specificity while adding responsiveness in the areas where Bootstrap is limited.",
+      stack: ["HTML", "CSS", "Bootstrap", "Sass", "npm"],
+    },
+    {
+      projectId: 4,
+      title: "Beats and Waves",
+      projectLink: "https://ajmcdee.github.io/react-music-player/",
+      githubLink: "https://github.com/AJMcDee/react-music-player",
+      image: beatsPreview,
+      description:
+        "A minimalist music player with a selection of chillhop tracks, built in React with styling in Sass. Recent features include dark mode toggle and 'pulse' animation effect when a song is playing",
+      stack: ["HTML", "Sass", "JavaScript", "React", "npm"],
     },
   ],
 };

@@ -2,35 +2,53 @@ import styled from "styled-components";
 import bgImage from "../img/bg-purple-abstract.jpg";
 import { HeaderH2, HeaderH1 } from "./elements/Headers";
 
-function Header({ LinkBoxLink }) {
+function Header() {
   return (
     <HeaderDiv>
       <HoldText>
-        <HeaderH1>Anna McDougall</HeaderH1>
-        <HeaderH2>Full-Stack Web Developer</HeaderH2>
+        <HeaderH1 className="fade-in">Anna McDougall</HeaderH1>
+        <HeaderH2 className="typing-demo">Full-Stack Web Developer</HeaderH2>
       </HoldText>
 
       <LinkBox>
         <LinkBoxLink href="#AboutMe">About</LinkBoxLink>
-        <LinkBoxLink href="#ContactForm">Contact</LinkBoxLink>
         <LinkBoxLink href="#TechStack">Tech Stack</LinkBoxLink>
-        <LinkBoxLink href="">Projects</LinkBoxLink>
+        <LinkBoxLink href="#ProjectShowcase">Projects</LinkBoxLink>
+        <LinkBoxLink href="#SocialFeed">Social Feed</LinkBoxLink>
+        <LinkBoxLink href="#ContactForm">Contact</LinkBoxLink>
+
         <LinkBoxLink
           href="http://www.linkedin.com/in/annajmcdougall"
           target="_blank"
         >
           LinkedIn
         </LinkBoxLink>
-        <LinkBoxLink href="#BlogFeed">Blog Feed</LinkBoxLink>
         <LinkBoxLink href="http://www.github.com/AJMcDee" target="_blank">
           GitHub
         </LinkBoxLink>
-
-        <LinkBoxLink href="">YouTube</LinkBoxLink>
       </LinkBox>
     </HeaderDiv>
   );
 }
+
+const LinkBoxLink = styled.a`
+  padding: 1rem;
+  margin: 2px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 3rem;
+  &:hover {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+  }
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+`;
 
 const HeaderDiv = styled.header`
   background-size: cover;

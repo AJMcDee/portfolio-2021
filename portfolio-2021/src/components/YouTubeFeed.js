@@ -24,10 +24,6 @@ function YouTubeFeed() {
           "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=PL6Xx4b2dsNzwAeTJ6QnlmYhvRlMgvxRNZ&key=AIzaSyCrsJw42t8ug4-LzAHGIHICbtbA1RLkS9g&part=snippet&maxResults=10"
         )
           .then((response) => response.json())
-          .then((dataOriginal) => {
-            console.log(dataOriginal.items[2]);
-            return dataOriginal;
-          })
           .then((data) =>
             data.items
               .filter((item) => item.snippet.title !== "Private video")

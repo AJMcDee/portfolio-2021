@@ -1,43 +1,16 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { HeaderH2 } from "./elements/Headers";
-
-const ContactContainer = styled.div`
-  padding: 3rem 0 8rem 0;
-  background-color: #131529;
-  box-shadow: 0px 0px 30px #b87700;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const StyledForm = styled.form`
-  display: flex;
-  max-width: 40vw;
-  margin-top: 2rem;
-  flex-direction: column;
-  align-items: center;
-  input,
-  textarea {
-    margin-top: 0.5rem;
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-  label {
-    align-self: flex-start;
-  }
-`;
+import StyledLink from "./elements/StyledLink";
 
 // Form template from Formspree.com
 
-function ContactForm({ HeaderH3 }) {
+function ContactForm() {
   const [status, setStatus] = useState("");
 
   return (
-    <ContactContainer>
-      <HeaderH2 id="ContactForm">Contact</HeaderH2>
+    <ContactContainer id="ContactForm">
+      <HeaderH2>Contact</HeaderH2>
       <StyledForm
         onSubmit={submitForm}
         action="https://formspree.io/f/xbjppknq"
@@ -51,7 +24,11 @@ function ContactForm({ HeaderH3 }) {
         <label for="message">Message:</label>
         <textarea type="text" name="message" id="message" cols="50" rows="6" />
 
-        {status === "SUCCESS" ? <p>Thank you!</p> : <button>Submit</button>}
+        {status === "SUCCESS" ? (
+          <p>Thank you!</p>
+        ) : (
+          <StyledLink>Submit</StyledLink>
+        )}
         {status === "ERROR" && (
           <p>
             Oops! There was an error. Please contact me{" "}
@@ -89,4 +66,31 @@ function ContactForm({ HeaderH3 }) {
   }
 }
 
+const ContactContainer = styled.div`
+  padding: 3rem 0 8rem 0;
+  background-color: #131529;
+  box-shadow: 0px 0px 30px #b87700;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const StyledForm = styled.form`
+  display: flex;
+  max-width: 40vw;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  input,
+  textarea {
+    margin-top: 0.5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  label {
+    align-self: flex-start;
+  }
+`;
 export default ContactForm;

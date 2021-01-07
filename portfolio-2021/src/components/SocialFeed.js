@@ -7,7 +7,7 @@ import { HeaderH2, HeaderH3 } from "./elements/Headers";
 
 function SocialFeed() {
   return (
-    <SocialFeedContainer>
+    <SocialFeedContainer id="SocialFeed">
       <HeaderH2>Social Media</HeaderH2>
       <SocialFeedBox>
         <BlogFeed />

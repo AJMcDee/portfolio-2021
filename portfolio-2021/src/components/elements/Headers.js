@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-const HeaderH1 = styled.h1`
+const HeaderH1 = styled.h1.attrs((props) => ({
+  className: props.className,
+}))`
   font-family: "Staatliches", sans-serif;
   color: white;
   font-size: 8rem;
@@ -20,7 +22,9 @@ const HeaderH1 = styled.h1`
   }
 `;
 
-const HeaderH2 = styled.h2`
+const HeaderH2 = styled.h2.attrs((props) => ({
+  className: props.className,
+}))`
   color: white;
   font-size: 3.5rem;
   padding-bottom: 1rem;
@@ -30,6 +34,28 @@ const HeaderH2 = styled.h2`
     font-size: 3rem;
     -webkit-text-stroke: 1px black;
     text-shadow: 0px 0px 1px black;
+  }
+
+  &.typing-demo {
+    width: 100%;
+    animation-delay: 4s;
+    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace, "Courier New", Courier;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
   }
 `;
 

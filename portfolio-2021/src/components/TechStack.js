@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { HeaderH2 } from "./elements/Headers";
+
+// Tech Stack Logos
 import mongoDb from "../img/mongoDb.png";
 import webpackLogo from "../img/webpackLogo.png";
 import expressLogo from "../img/expressLogo.png";
 import jqueryLogo from "../img/jqueryLogo.png";
-import { HeaderH2 } from "./elements/Headers";
 
 import {
   faHtml5,
@@ -19,8 +21,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function TechStack() {
   return (
-    <TechStackContainer>
-      <HeaderH2 id="TechStack">Tech Stack</HeaderH2>
+    <TechStackContainer id="TechStack">
+      <HeaderH2>Tech Stack</HeaderH2>
       <LogoBox>
         <Logo>
           <FontAwesomeIcon title="HTML5 Logo" icon={faHtml5} />
@@ -34,7 +36,6 @@ function TechStack() {
           <FontAwesomeIcon title="JavaScript Logo" icon={faJsSquare} />
           <p>JavaScript</p>
         </Logo>
-
         <Logo>
           <FontAwesomeIcon title="NPM Logo" icon={faNpm} />
           <p>NPM</p>
@@ -95,7 +96,7 @@ const Logo = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1.5rem;
+  margin: 1.5rem;
   svg,
   img {
     margin-bottom: 5px;

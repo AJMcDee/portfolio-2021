@@ -1,8 +1,16 @@
 import styled from "styled-components";
 import { HeaderH3 } from "./elements/Headers";
 import StyledLink from "./elements/StyledLink";
+import StackLogo from "./elements/StackLogo";
 
-function ProjectCard({ title, projectLink, githubLink, image, description }) {
+function ProjectCard({
+  title,
+  projectLink,
+  githubLink,
+  image,
+  description,
+  stack,
+}) {
   return (
     <ProjectCardBox>
       <StyledCard>
@@ -11,7 +19,13 @@ function ProjectCard({ title, projectLink, githubLink, image, description }) {
         </ImageLink>
         <TextBox>
           <HeaderH3>{title}</HeaderH3>
+          <LogoBox>
+            {stack.map((item) => {
+              return <StackLogo stack={item} />;
+            })}
+          </LogoBox>
           <p>{description}</p>
+
           <ButtonBox>
             <StyledLink href={projectLink} target="_blank" rel="noreferrer">
               View Deployment
@@ -39,6 +53,9 @@ const ProjectCardBox = styled.div`
   align-items: baseline;
   background: black;
   padding: 2rem;
+  img {
+    width: 80%;
+  }
   & > section {
     display: flex;
     flex-direction: column;
@@ -70,6 +87,18 @@ const TextBox = styled.div`
   }
 `;
 
+const LogoBox = styled.p`
+  height: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  * {
+    padding: 5px;
+    height: 40px;
+    font-size: 40px;
+  }
+`;
+
 const ButtonBox = styled.div`
   * {
     margin: 2rem 2rem 2rem 0rem;
@@ -87,12 +116,15 @@ const StyledCard = styled.div`
 `;
 
 const ImageLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   margin-right: 2rem;
   margin-top: 8px;
 `;
 
 const CardImage = styled.img`
-  width: 100%;
+  border: 2px solid white;
 `;
 
 export default ProjectCard;

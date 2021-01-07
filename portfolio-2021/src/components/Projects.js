@@ -6,10 +6,10 @@ import projectInfo from "../projectInfo";
 
 function Projects() {
   return (
-    <ProjectsContainer>
-      <HeaderH2 id="ContactForm">Project Showcase</HeaderH2>
+    <ProjectsContainer id="ProjectShowcase">
+      <HeaderH2>Project Showcase</HeaderH2>
 
-      {projectInfo.projects.map((project) => {
+      {projectInfo.projects.reverse().map((project) => {
         return (
           <ProjectCard
             title={project.title}
@@ -17,6 +17,7 @@ function Projects() {
             image={project.image}
             description={project.description}
             githubLink={project.githubLink}
+            stack={project.stack}
           />
         );
       })}

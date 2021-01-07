@@ -20,36 +20,17 @@ import Projects from "./components/Projects";
 
 // Universal Styling
 
-const LinkBoxLink = styled.a`
-  padding: 1rem;
-  margin: 2px;
-  border: 2px solid white;
-  background: transparent;
-  color: white;
-  flex-grow: 1;
-  text-align: center;
-  font-size: 3rem;
-  &:hover {
-    color: black;
-    background-color: white;
-    text-decoration: none;
-  }
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
-`;
-
 function App() {
   return (
     <AppContainer className="App" id="top">
       <Navigation />
-      <Header LinkBoxLink={LinkBoxLink} />
-      <AboutMe />
-      <TechStack />
+      <Header />
+      <AboutMe id="AboutMe" />
+      <TechStack id="TechStack" />
 
-      <Projects />
-      <SocialFeed />
-      <ContactForm />
+      <Projects id="ProjectShowcase" />
+      <SocialFeed id="SocialFeed" />
+      <ContactForm id="ContactForm" />
     </AppContainer>
   );
 }

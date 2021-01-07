@@ -31,7 +31,8 @@ function BlogFeed() {
                 (post) =>
                   post.tags.includes("javascript") ||
                   post.tags.includes("html") ||
-                  post.tags.includes("css")
+                  post.tags.includes("css") ||
+                  post.tags.includes("node")
               )
               .map((post) => {
                 return {
