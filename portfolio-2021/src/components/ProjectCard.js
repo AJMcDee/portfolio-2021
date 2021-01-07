@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { HeaderH3 } from "./elements/Headers";
 import StyledLink from "./elements/StyledLink";
 import StackLogo from "./elements/StackLogo";
+import { useLayoutEffect, useState } from "react";
 
 function ProjectCard({
   title,
@@ -12,9 +13,20 @@ function ProjectCard({
   description,
   stack,
 }) {
-  let image = window.matchMedia("(min-width: 768px)").matches
-    ? imageLandscape
-    : imagePortrait;
+  // Hook to change project image preview orientation based on screen
+  const [image, setImage] = useState(
+    window.matchMedia("(min-width: 768px)").matches
+      ? imageLandscape
+      : imagePortrait
+  );
+
+  useLayoutEffect(() => {
+    function updateWidth() {
+      setImage(window.innerWidth >= 768 ? imageLandscape : imagePortrait);
+    }
+    window.addEventListener("resize", updateWidth);
+  }, []);
+
   return (
     <ProjectCardBox>
       <StyledCard>

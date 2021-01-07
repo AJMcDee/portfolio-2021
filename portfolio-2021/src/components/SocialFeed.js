@@ -54,9 +54,11 @@ const SocialFeedBox = styled.div`
   background: black;
   padding: 2rem 2rem 4rem 2rem;
 
-  @media (min-width: 1200) {
+  @media (min-width: 1200px) {
     max-width: 80vw;
     flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 `;
 
