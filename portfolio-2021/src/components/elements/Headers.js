@@ -39,7 +39,7 @@ const HeaderH2 = styled.h2.attrs((props) => ({
     text-shadow: 0px 0px 3px black;
   }
 
-  &.typing-demo {
+  &.typing {
     padding-bottom: 0;
     font-size: 1.1rem;
     width: 100%;

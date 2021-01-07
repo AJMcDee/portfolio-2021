@@ -6,8 +6,8 @@ function Header() {
   return (
     <HeaderDiv>
       <HoldText>
-        <HeaderH1 className="fade-in">Anna McDougall</HeaderH1>
-        <HeaderH2 className="typing-demo">Full-Stack Web Developer</HeaderH2>
+        <HeaderH1>Anna McDougall</HeaderH1>
+        <HeaderH2 className="typing">Full-Stack Web Developer</HeaderH2>
       </HoldText>
 
       <LinkBox>

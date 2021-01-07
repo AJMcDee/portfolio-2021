@@ -52,7 +52,7 @@ function AboutMe() {
               <FontAwesomeIcon icon={faTwitterSquare} />
             </a>
             <a
-              href="http://https://www.linkedin.com/in/annajmcdougall/"
+              href="https://www.linkedin.com/in/annajmcdougall/"
               target="_blank"
               rel="noreferrer"
             >

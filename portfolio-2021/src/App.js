@@ -9,13 +9,8 @@ import bgImage from "./img/bg-purple-abstract.jpg";
 import Projects from "./components/Projects";
 
 // TODO:
-// - Create Project Card component
-// - Add 3 projects
-// - Fix social media cards on x-small devices
-// - Update navigation links (both in header and navbar)
 // - Clean up styling (ensure consistency)
 // - Reorder imports to make sense
-// - Remove console logs
 // - Comment code
 
 // Universal Styling
@@ -31,6 +26,7 @@ function App() {
       <Projects id="ProjectShowcase" />
       <SocialFeed id="SocialFeed" />
       <ContactForm id="ContactForm" />
+      <FinalWord>Designed and Coded by © Anna McDougall, 2021</FinalWord>
     </AppContainer>
   );
 }
@@ -44,6 +40,17 @@ const AppContainer = styled.div`
     url(${bgImage});
   background-repeat: repeat-y;
   background-attachment: fixed;
-  padding-bottom: 5rem;
+`;
+
+const FinalWord = styled.p`
+  font-size: 1.1rem;
+  color: white;
+  padding: 3rem;
+  align-self: center;
+  text-align: center;
+  text-shadow: 0px 0px 4px black;
+  @media (min-width: 768px) {
+    align-self: flex-end;
+  }
 `;
 export default App;

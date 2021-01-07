@@ -25,7 +25,12 @@ function Navigation() {
       fixed="top"
       style={{ position: "sticky", display: navExpand }}
     >
-      <Navbar.Brand href="#home">Anna McDougall</Navbar.Brand>
+      <Navbar.Brand
+        href="#home"
+        style={{ fontFamily: `"Staatliches", sans-serif` }}
+      >
+        Anna McDougall
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
