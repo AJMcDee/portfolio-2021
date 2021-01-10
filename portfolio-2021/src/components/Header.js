@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import bgImage from "../img/bg-purple-abstract.jpg";
 import { HeaderH2, HeaderH1 } from "./elements/Headers";
+import {
+  faTwitterSquare,
+  faGithubSquare,
+  faLinkedin,
+  faYoutubeSquare,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Header() {
   return (
@@ -11,12 +18,55 @@ function Header() {
       </HoldText>
 
       <LinkBox>
-        <LinkBoxLink href="#AboutMe">About</LinkBoxLink>
+        <AboutText>
+          <StyledEQH>
+            <span id="energetic">Energetic. </span>
+            <span id="quirky">Quirky. </span>
+            <span id="helpful">Helpful. </span>
+          </StyledEQH>
+          <p>
+            Anna McDougall is a full-stack developer with a passion for
+            JavaScript.
+          </p>
+
+          <p>
+            Now, she seeks the next adventure: a career in which her expertise
+            and enthusiasm can help drive a great product and contribute to a
+            great team.
+          </p>
+        </AboutText>
+        <SocialIcons>
+          <a
+            href="http://www.twitter.com/AnnaJMcDougall"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faTwitterSquare} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/annajmcdougall/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a href="https://github.com/AJMcDee" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faGithubSquare} />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCjJzKrbr3WGn1xE0LAQ91yA"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faYoutubeSquare} />
+          </a>
+        </SocialIcons>
+
+        {/* <LinkBoxLink href="#AboutMe">About</LinkBoxLink>
         <LinkBoxLink href="#TechStack">Tech Stack</LinkBoxLink>
         <LinkBoxLink href="#ProjectShowcase">Projects</LinkBoxLink>
         <LinkBoxLink href="#SocialFeed">Social Feed</LinkBoxLink>
         <LinkBoxLink href="#ContactForm">Contact</LinkBoxLink>
-
         <LinkBoxLink
           href="http://www.linkedin.com/in/annajmcdougall"
           target="_blank"
@@ -25,11 +75,54 @@ function Header() {
         </LinkBoxLink>
         <LinkBoxLink href="http://www.github.com/AJMcDee" target="_blank">
           GitHub
-        </LinkBoxLink>
+        </LinkBoxLink> */}
       </LinkBox>
     </HeaderDiv>
   );
 }
+
+const StyledEQH = styled.p`
+  padding-top: 1rem;
+  * {
+    font-family: "Staatliches", sans-serif;
+    font-size: 2.1rem;
+  }
+  #energetic {
+    text-shadow: 0px 0px 5px yellow;
+  }
+  #quirky {
+    text-shadow: 0px 0px 5px aqua;
+  }
+  #helpful {
+    text-shadow: 0px 0px 5px fuchsia;
+  }
+`;
+
+const AboutText = styled.p`
+  p {
+    font-size: 1em;
+    @media (min-width: 768px) {
+      font-size: 1.2em;
+    }
+  }
+`;
+const SocialIcons = styled.div`
+  text-align: right;
+  color: white;
+  font-size: 2rem;
+  a {
+    margin: 10px;
+    color: white;
+  }
+
+  svg:hover {
+    color: #8d5a97;
+    cursor: pointer;
+  }
+  @media (min-width: 360px) {
+    font-size: 3rem;
+  }
+`;
 
 const LinkBoxLink = styled.a`
   padding: 1rem;
@@ -54,6 +147,7 @@ const LinkBoxLink = styled.a`
 `;
 
 const HeaderDiv = styled.header`
+  padding-top: 10px;
   background-size: cover;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(${bgImage});
@@ -87,15 +181,16 @@ const HoldText = styled.div`
 const LinkBox = styled.div`
   margin-top: 1rem;
   min-height: 180px;
-  max-width: 30vw;
+  max-width: 85vw;
   min-width: 200px;
   border: 5px solid white;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
+  justify-content: center;
   background: black;
-  @media (max-width: 1024px) {
-    max-width: 80vw;
+  @media (min-width: 1024px) {
+    max-width: 40vw;
   }
 `;
 

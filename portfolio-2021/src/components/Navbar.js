@@ -18,30 +18,53 @@ function Navigation() {
   }, []);
 
   return (
-    <Navbar
-      bg="dark"
-      variant="dark"
-      expand="lg"
-      fixed="top"
-      style={{ position: "sticky", display: navExpand }}
-    >
-      <Navbar.Brand
-        href="#home"
-        style={{ fontFamily: `"Staatliches", sans-serif` }}
+    <>
+      <style type="text/css">
+        {`
+      .navbar-anna {
+         position: sticky;
+         box-shadow: 0px 0px 30px #b87700;
+         padding: 1rem;
+         background-color: #131529;
+         display: ${navExpand};
+    }
+    `}
+      </style>
+      <Navbar
+        variant="dark"
+        bg="dark"
+        expand="lg"
+        fixed="top"
+        style={{ display: navExpand }}
       >
-        Anna McDougall
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#AboutMe">About</Nav.Link>
-          <Nav.Link href="#TechStack">Tech Stack</Nav.Link>
-          <Nav.Link href="#ProjectShowcase">Projects</Nav.Link>
-          <Nav.Link href="#SocialFeed">Social Feed</Nav.Link>
-          <Nav.Link href="#ContactForm">Contact</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+        <Navbar.Brand
+          href="#home"
+          style={{ fontFamily: `"Staatliches", sans-serif` }}
+        >
+          Anna McDougall
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#AboutMe" className="text-light">
+              About
+            </Nav.Link>
+            <Nav.Link className="text-light" href="#TechStack">
+              Tech Stack
+            </Nav.Link>
+            <Nav.Link className="text-light" href="#ProjectShowcase">
+              Projects
+            </Nav.Link>
+            <Nav.Link className="text-light" href="#SocialFeed">
+              Social Feed
+            </Nav.Link>
+            <Nav.Link className="text-light" href="#ContactForm">
+              Contact
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </>
   );
 }
 

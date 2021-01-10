@@ -26,53 +26,38 @@ function AboutMe() {
           <AboutText>
             <p>
               I am a passionate, high-energy, and friendly developer who was
-              born in Austraila but has lived in Germany since 2015. I speak
-              German at a business-fluent level (approx. C1) and Spanish at an
+              born in Austraila but has lived in Germany since 2015. From asking
+              for a "poota" as a toddler and learning HTML at age 8, I have
+              always been fascinated with the world of technology.
+            </p>
+            <p>
+              In 2021, I will graduate from a one-year course of study
+              (Weiterbildung) in Web- and Software Development from Digital
+              Career Institute in Leipzig, Germany. Not only have I excelled
+              academically, but I also pride myself in working to lift up the
+              other students both through her role as Class Tutor and as Class
+              Representative.
+            </p>
+            <p>
+              My skills revolve around the MERN stack: MongoDB, Express, React,
+              and Node. Naturally, this comes in addition to strong abilities in
+              HTML, CSS, and JavaScript (ECMAScript 6). I speak German at a
+              business-fluent level (approx. C1) and Spanish at an
               upper-intermediate (approx. B2) level.
             </p>
             <p>
-              In Australia, I worked for over six years in the fields of Project
-              Management and Digital Marketing. In 2021, I will graduate from a
-              one-year German government-certified course (Weiterentwicklung) in
-              Full-Stack Web Development, and will be looking for my first
-              full-time position in web development. I am both a student and
-              tutor in the course, helping my classmates to achieve the best
-              possible results and alleviating confusion over JavaScript
-              concepts. Motivating others drives me to improve myself, and I
-              work hard to lift my teammates up while pursuing personal
-              excellence.
+              In addition to my training and work experience, I also bring an
+              unending enthusiasm and passion for technology and JavaScript, as
+              well as for lifting up others around me. Not only do I write a
+              comprehensive <a href="http://blog.annamcdougall.com">blog</a> on
+              relevant technical and workplace topics, but I also produce videos
+              on{" "}
+              <a href="https://www.youtube.com/channel/UCjJzKrbr3WGn1xE0LAQ91yA">
+                my YouTube channel
+              </a>
+              , mainly aimed at beginners to programming and JavaScript.
             </p>
           </AboutText>
-          <SocialIcons>
-            <a
-              href="http://www.twitter.com/AnnaJMcDougall"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faTwitterSquare} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/annajmcdougall/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a
-              href="https://github.com/AJMcDee"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithubSquare} />
-            </a>
-            <a
-              href="https://www.youtube.com/channel/UCjJzKrbr3WGn1xE0LAQ91yA"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faYoutubeSquare} />
-            </a>
-          </SocialIcons>
         </AboutInfo>
       </AboutBox>
     </AboutMain>
@@ -82,7 +67,7 @@ function AboutMe() {
 const AboutBox = styled.div`
   min-height: 200px;
   min-width: 50vw;
-  max-width: 80vw;
+  max-width: 85vw;
   border: 5px solid white;
   display: flex;
   flex-direction: column;
@@ -120,6 +105,7 @@ const AboutInfo = styled.div`
 
 const AboutText = styled.p`
   font-size: 1em;
+  text-align: justify;
   @media (min-width: 768px) {
     font-size: 1.2em;
   }
@@ -131,7 +117,7 @@ const AboutVideo = styled.div`
     width: 200px;
     height: 120px;
     @media (min-width: 360px) {
-      width: 300px;
+      width: 290px;
       height: 180px;
     }
     @media (min-width: 768px) {
