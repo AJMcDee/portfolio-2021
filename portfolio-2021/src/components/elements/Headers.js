@@ -40,10 +40,10 @@ const HeaderH2 = styled.h2.attrs((props) => ({
   }
 
   &.typing {
+    visibility: visible;
     padding-bottom: 0;
     font-size: 1.1rem;
     width: 100%;
-    animation-delay: 4s;
     animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -55,6 +55,10 @@ const HeaderH2 = styled.h2.attrs((props) => ({
     @media (min-width: 768px) {
       font-size: 3rem;
     }
+  }
+
+  &.no-display {
+    visibility: hidden;
   }
 
   @keyframes typing {

@@ -8,13 +8,22 @@ import {
   faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState, useEffect } from "react";
 
 function Header() {
+  const [typingEffect, setTypingEffect] = useState("no-display");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTypingEffect("typing");
+    }, 1500);
+  }, []);
+
   return (
     <HeaderDiv>
       <HoldText>
         <HeaderH1>Anna McDougall</HeaderH1>
-        <HeaderH2 className="typing">Full-Stack Web Developer</HeaderH2>
+        <HeaderH2 className={typingEffect}>Full-Stack Web Developer</HeaderH2>
       </HoldText>
 
       <LinkBox>
@@ -61,21 +70,6 @@ function Header() {
             <FontAwesomeIcon icon={faYoutubeSquare} />
           </a>
         </SocialIcons>
-
-        {/* <LinkBoxLink href="#AboutMe">About</LinkBoxLink>
-        <LinkBoxLink href="#TechStack">Tech Stack</LinkBoxLink>
-        <LinkBoxLink href="#ProjectShowcase">Projects</LinkBoxLink>
-        <LinkBoxLink href="#SocialFeed">Social Feed</LinkBoxLink>
-        <LinkBoxLink href="#ContactForm">Contact</LinkBoxLink>
-        <LinkBoxLink
-          href="http://www.linkedin.com/in/annajmcdougall"
-          target="_blank"
-        >
-          LinkedIn
-        </LinkBoxLink>
-        <LinkBoxLink href="http://www.github.com/AJMcDee" target="_blank">
-          GitHub
-        </LinkBoxLink> */}
       </LinkBox>
     </HeaderDiv>
   );
@@ -124,34 +118,13 @@ const SocialIcons = styled.div`
   }
 `;
 
-const LinkBoxLink = styled.a`
-  padding: 1rem;
-  margin: 2px;
-  border: 2px solid white;
-  background: transparent;
-  color: white;
-  flex-grow: 1;
-  text-align: center;
-  font-size: 1.2rem;
-  &:hover {
-    color: black;
-    background-color: white;
-    text-decoration: none;
-  }
-  @media (min-width: 360px) {
-    font-size: 1.5rem;
-  }
-  @media (min-width: 768px) {
-    font-size: 3rem;
-  }
-`;
-
 const HeaderDiv = styled.header`
   padding-top: 10px;
   background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(${bgImage});
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh;
   padding-bottom: 10vh;
   display: flex;
@@ -188,7 +161,9 @@ const LinkBox = styled.div`
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
-  background: black;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* background: black; */
   @media (min-width: 1024px) {
     max-width: 40vw;
   }

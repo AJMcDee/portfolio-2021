@@ -1,11 +1,4 @@
 import styled from "styled-components";
-import {
-  faTwitterSquare,
-  faGithubSquare,
-  faLinkedin,
-  faYoutubeSquare,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { HeaderH2 } from "./elements/Headers";
 
 function AboutMe() {
