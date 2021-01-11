@@ -31,6 +31,7 @@ function Navigation() {
     `}
       </style>
       <Navbar
+        collapseOnSelect
         variant="dark"
         bg="dark"
         expand="lg"
@@ -38,7 +39,7 @@ function Navigation() {
         style={{ display: navExpand }}
       >
         <Navbar.Brand
-          href="#home"
+          href="#top"
           style={{ fontFamily: `"Staatliches", sans-serif` }}
         >
           Anna McDougall
@@ -49,9 +50,11 @@ function Navigation() {
             <Nav.Link href="#AboutMe" className="text-light">
               About
             </Nav.Link>
+
             <Nav.Link className="text-light" href="#TechStack">
               Tech Stack
             </Nav.Link>
+
             <Nav.Link className="text-light" href="#ProjectShowcase">
               Projects
             </Nav.Link>
