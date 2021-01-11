@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/portfolio-2021/static/js/main.5b8083b2.chunk.js",
-    "main.js.map": "/portfolio-2021/static/js/main.5b8083b2.chunk.js.map",
+    "main.js": "/portfolio-2021/static/js/main.cdda15d6.chunk.js",
+    "main.js.map": "/portfolio-2021/static/js/main.cdda15d6.chunk.js.map",
     "runtime-main.js": "/portfolio-2021/static/js/runtime-main.bb7b0b32.js",
     "runtime-main.js.map": "/portfolio-2021/static/js/runtime-main.bb7b0b32.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/portfolio-2021/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.455960eb.chunk.js": "/portfolio-2021/static/js/2.455960eb.chunk.js",
-    "static/js/2.455960eb.chunk.js.map": "/portfolio-2021/static/js/2.455960eb.chunk.js.map",
+    "static/js/2.d0400daa.chunk.js": "/portfolio-2021/static/js/2.d0400daa.chunk.js",
+    "static/js/2.d0400daa.chunk.js.map": "/portfolio-2021/static/js/2.d0400daa.chunk.js.map",
     "static/js/3.3c59e496.chunk.js": "/portfolio-2021/static/js/3.3c59e496.chunk.js",
     "static/js/3.3c59e496.chunk.js.map": "/portfolio-2021/static/js/3.3c59e496.chunk.js.map",
     "index.html": "/portfolio-2021/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/portfolio-2021/static/css/2.20aa2d7b.chunk.css.map",
-    "static/js/2.455960eb.chunk.js.LICENSE.txt": "/portfolio-2021/static/js/2.455960eb.chunk.js.LICENSE.txt",
+    "static/js/2.d0400daa.chunk.js.LICENSE.txt": "/portfolio-2021/static/js/2.d0400daa.chunk.js.LICENSE.txt",
     "static/media/beats.c966e8bb.png": "/portfolio-2021/static/media/beats.c966e8bb.png",
     "static/media/beatsPortrait.b08b26fe.png": "/portfolio-2021/static/media/beatsPortrait.b08b26fe.png",
     "static/media/bennys.73b91ff3.png": "/portfolio-2021/static/media/bennys.73b91ff3.png",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.bb7b0b32.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.455960eb.chunk.js",
-    "static/js/main.5b8083b2.chunk.js"
+    "static/js/2.d0400daa.chunk.js",
+    "static/js/main.cdda15d6.chunk.js"
   ]
 }
