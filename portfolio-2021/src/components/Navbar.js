@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
@@ -18,7 +18,8 @@ function Navigation() {
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    window.addEventListener("resize", handleScroll);
     window.addEventListener("scroll", handleScroll);
   }, []);
 
