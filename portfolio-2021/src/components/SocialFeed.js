@@ -1,9 +1,13 @@
 import styled from "styled-components";
-import BlogFeed from "./BlogFeed";
-import YouTubeFeed from "./YouTubeFeed";
 import React from "react";
 import { Timeline } from "react-twitter-widgets";
 import { HeaderH2, HeaderH3 } from "./elements/Headers";
+import SocialFeedCard from "./SocialFeedCard";
+import {
+  processYouTubeFeed,
+  fetchYouTube,
+} from "./functions/processYouTubeFeed.js";
+import { processBlogFeed, fetchDevTo } from "./functions/processBlogFeed.js";
 
 function SocialFeed() {
   let timelineHeight = window.matchMedia("(min-width: 768px)").matches
@@ -14,8 +18,18 @@ function SocialFeed() {
     <SocialFeedContainer id="SocialFeed">
       <HeaderH2>Social Media</HeaderH2>
       <SocialFeedBox>
-        <BlogFeed />
-        <YouTubeFeed />
+        <SocialFeedCard
+          title="YouTube Feed"
+          process={processYouTubeFeed}
+          fetchUrl={fetchYouTube}
+          buttonText="Watch Video"
+        />
+        <SocialFeedCard
+          title="Blog Feed"
+          process={processBlogFeed}
+          fetchUrl={fetchDevTo}
+          buttonText="Read Post"
+        />
         <TwitterFeed>
           <HeaderH3>Twitter Feed</HeaderH3>
           <Timeline
@@ -58,7 +72,6 @@ const SocialFeedBox = styled.div`
     max-width: 80vw;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
   }
 `;
 

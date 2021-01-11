@@ -16,6 +16,7 @@ function YouTubeFeed() {
     index: 0,
   });
   const [itemList, setItemList] = useState([{ item: placeholder, index: 0 }]);
+  const [animationDisplay, setAnimationDisplay] = useState("");
 
   useEffect(() => {
     async function getPosts() {
@@ -57,14 +58,23 @@ function YouTubeFeed() {
       newIndex = currentIndex === 0 ? itemList.length - 1 : currentIndex - 1;
     }
     setCurrentItem({ item: { ...itemList[newIndex] }, index: newIndex });
+    setAnimationDisplay(animationDisplay === "blink" ? "blink2" : "blink");
   }
 
   return (
     <BlogFeedContainer>
       <HeaderH3>YouTube Feed</HeaderH3>
 
-      <SingleCardCarousel currentItem={currentItem} handleClick={handleClick} />
-      <ItemLink currentItem={currentItem} ButtonText="Watch Video" />
+      <SingleCardCarousel
+        currentItem={currentItem}
+        handleClick={handleClick}
+        animationDisplay={animationDisplay}
+      />
+      <ItemLink
+        currentItem={currentItem}
+        animationDisplay={animationDisplay}
+        ButtonText="Watch Video"
+      />
     </BlogFeedContainer>
   );
 }

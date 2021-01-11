@@ -5,13 +5,13 @@ import {
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
-function SingleCardCarousel({ currentItem, handleClick }) {
+function SingleCardCarousel({ currentItem, handleClick, animationDisplay }) {
   return (
     <CarouselContainer>
       <FontAwesomeIcon
         title="Previous"
         icon={faChevronLeft}
-        style={{ color: "white", fontSize: "1rem" }}
+        style={{ color: "white", fontSize: "1rem", cursor: "pointer" }}
         onClick={handleClick}
       />
       <Card>
@@ -22,13 +22,14 @@ function SingleCardCarousel({ currentItem, handleClick }) {
             style={{ cursor: "pointer" }}
             width="258px"
             height="136px"
+            className={animationDisplay}
           />
         </a>
       </Card>
       <FontAwesomeIcon
         title="Next"
         icon={faChevronRight}
-        style={{ color: "white", fontSize: "1rem" }}
+        style={{ color: "white", fontSize: "1rem", cursor: "pointer" }}
         onClick={handleClick}
       />
     </CarouselContainer>
@@ -48,6 +49,28 @@ const CardImg = styled.img`
     height: 230px;
     max-height: unset;
     max-width: unset;
+  }
+  &.blink {
+    animation: blink 2s linear;
+  }
+  &.blink2 {
+    animation: blink2 2s linear;
+  }
+  @keyframes blink {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes blink2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `;
 

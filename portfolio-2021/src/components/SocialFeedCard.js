@@ -2,88 +2,76 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import SingleCardCarousel from "./SingleCardCarousel";
 import ItemLink from "./elements/ItemLink";
+import { HeaderH3 } from "./elements/Headers";
 
-function BlogFeed({ HeaderH3, LinkBoxLink }) {
-  const [itemList, setItemList] = useState([]);
-  const getPosts = async () => {
-    try {
-      await fetch("https://dev.to/api/articles?username=annajmcdougall")
-        .then((response) => response.json())
-
-        // Code to filter posts to more technical subjects
-        .then((data) => {
-          return data.filter(
-            (post) =>
-              post.tags.includes("javascript") ||
-              post.tags.includes("html") ||
-              post.tags.includes("css")
-          );
-        })
-        .then((allPosts) => {
-          setItemList(allPosts);
-          setCurrentItem(itemList[0]);
-        });
-    } catch (err) {
-      console.error(err.message);
-    }
+function SocialFeedCard({ title, fetchUrl, process, buttonText }) {
+  const placeholder = {
+    url: "https://www.youtube.com/watch?v=5o4P8lESTF0",
+    social_image: "https://i.ytimg.com/vi/5o4P8lESTF0/mqdefault.jpg",
+    title: "Parameter vs Argument",
   };
 
-  const placeholder = [
-    {
-      url: "https://dev.to/annajmcdougall/5-tips-for-learning-grid-46l2",
-      social_image:
-        "https://res.cloudinary.com/practicaldev/image/fetch/s--dClSjJwe--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/0ohoamphlfxut67om02l.png",
-      title: "5 Tips for Learning Grid",
-    },
-  ];
-
   const [currentItem, setCurrentItem] = useState({
-    item: { ...placeholder },
+    item: placeholder,
     index: 0,
   });
-
-  function handleNext() {
-    const currentIndex = currentItem.index;
-    const newIndex = (currentIndex + 1) % itemList.length;
-    setCurrentItem({
-      item: { ...itemList[newIndex] },
-      index: newIndex,
-    });
-  }
-
-  function handlePrev() {
-    const currentIndex = currentItem.index;
-    const newIndex =
-      currentIndex === 0 ? itemList.length - 1 : currentIndex - 1;
-    setCurrentItem({
-      item: { ...itemList[newIndex] },
-      index: newIndex,
-    });
-  }
+  const [itemList, setItemList] = useState([{ item: placeholder, index: 0 }]);
+  const [animationDisplay, setAnimationDisplay] = useState("");
 
   useEffect(() => {
+    async function getPosts() {
+      try {
+        await fetch(fetchUrl)
+          .then((response) => response.json())
+          .then((data) => process(data))
+          .then((allPosts) => {
+            setItemList(allPosts);
+            setCurrentItem({ item: { ...allPosts[0] }, index: 0 });
+          });
+      } catch (err) {
+        console.error(err.message);
+      }
+    }
+
     getPosts();
   }, []);
 
+  function handleClick(e) {
+    const currentIndex = currentItem.index;
+    const movement = e.target.textContent;
+    let newIndex;
+    if (movement === "Next") {
+      newIndex = (currentIndex + 1) % itemList.length;
+    } else {
+      newIndex = currentIndex === 0 ? itemList.length - 1 : currentIndex - 1;
+    }
+    setCurrentItem({ item: { ...itemList[newIndex] }, index: newIndex });
+    setAnimationDisplay(animationDisplay === "blink" ? "blink2" : "blink");
+  }
+
   return (
-    <BlogFeedContainer>
-      <HeaderH3>Blog Feed</HeaderH3>
+    <FeedContainer>
+      <HeaderH3>{title}</HeaderH3>
 
       <SingleCardCarousel
         currentItem={currentItem}
-        handleNext={handleNext}
-        handlePrev={handlePrev}
+        handleClick={handleClick}
+        animationDisplay={animationDisplay}
       />
-      <ItemLink currentItem={currentItem} />
-    </BlogFeedContainer>
+      <ItemLink
+        currentItem={currentItem}
+        animationDisplay={animationDisplay}
+        ButtonText={buttonText}
+      />
+    </FeedContainer>
   );
 }
 
-const BlogFeedContainer = styled.section`
+const FeedContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 3rem 0px;
 `;
 
-export default BlogFeed;
+export default SocialFeedCard;

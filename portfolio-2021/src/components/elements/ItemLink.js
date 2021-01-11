@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-function ItemLink({ currentItem, ButtonText }) {
-  return <StyledLink href={currentItem.item.url}>{ButtonText}</StyledLink>;
+function ItemLink({ currentItem, ButtonText, animationDisplay }) {
+  return (
+    <StyledLink href={currentItem.item.url} className={animationDisplay}>
+      {ButtonText}
+    </StyledLink>
+  );
 }
 
 const StyledLink = styled.a`
@@ -17,6 +21,25 @@ const StyledLink = styled.a`
   }
   &.blink {
     animation: blink 2s linear;
+  }
+  &.blink2 {
+    animation: blink2 2s linear;
+  }
+  @keyframes blink {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes blink2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `;
 
