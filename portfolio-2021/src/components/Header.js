@@ -8,13 +8,20 @@ import {
   faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 
 function Header() {
+  const [typingActive, setTypingActive] = useState("hide");
+
+  useEffect(() => {
+    setTypingActive("typing");
+  }, []);
+
   return (
     <HeaderDiv>
       <HoldText>
         <HeaderH1>Anna McDougall</HeaderH1>
-        <HeaderH2 className="typing">Full-Stack Web Developer</HeaderH2>
+        <HeaderH2 className={typingActive}>Full-Stack Web Developer</HeaderH2>
       </HoldText>
 
       <LinkBox>

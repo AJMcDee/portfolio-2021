@@ -31,27 +31,36 @@ const HeaderH2 = styled.h2.attrs((props) => ({
   color: white;
   padding-bottom: 1rem;
   font-size: 3rem;
-  -webkit-text-stroke: 1px black;
   text-shadow: 0px 0px 1px black;
+
   @media (min-width: 768px) {
     font-size: 3.5rem;
-    -webkit-text-stroke: 2px black;
-    text-shadow: 0px 0px 3px black;
-  }
-
-  @-moz-document url-prefix() {
-    -webkit-text-stroke: unset;
   }
 
   &.typing {
+    visibility: visible;
+    color: white;
     padding-bottom: 0;
     font-size: 1.1rem;
-    width: 100%;
-    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace, "Courier New", Courier;
+    animation: type 3.5s steps(24, end), blink-caret 0.75s step-end infinite;
+    @keyframes type {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink-caret {
+      50% {
+        border-color: transparent;
+      }
+    }
     @media (min-width: 360px) {
       font-size: 1.4rem;
     }
@@ -60,16 +69,8 @@ const HeaderH2 = styled.h2.attrs((props) => ({
     }
   }
 
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-  }
-
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
+  &.hide {
+    visibility: hidden;
   }
 `;
 
