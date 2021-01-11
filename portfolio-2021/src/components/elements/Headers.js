@@ -31,16 +31,15 @@ const HeaderH2 = styled.h2.attrs((props) => ({
   color: white;
   padding-bottom: 1rem;
   font-size: 3rem;
-  text-shadow: 0px 0px 5px aqua;
+  text-shadow: 0px 0px 3px aqua;
 
   @media (min-width: 768px) {
-    text-shadow: 0px 0px 7px aqua;
+    text-shadow: 0px 0px 4px aqua;
 
     font-size: 3.5rem;
   }
 
   &.typing {
-    background-color: #1a1a1a;
     visibility: visible;
     color: white;
     padding-bottom: 0;
@@ -49,7 +48,7 @@ const HeaderH2 = styled.h2.attrs((props) => ({
     overflow: hidden;
     border-right: 3px solid;
     font-family: "Inconsolatas", "Courier New", monospace;
-    text-shadow: none;
+    text-shadow: 0px 0px 2px black;
     animation: type 3.5s steps(24, end), blink-caret 0.75s step-end infinite;
     @keyframes type {
       from {

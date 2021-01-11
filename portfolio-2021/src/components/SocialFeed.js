@@ -57,6 +57,8 @@ const SocialFeedContainer = styled.section`
 `;
 
 const SocialFeedBox = styled.div`
+  box-shadow: 0px 0px 5px fuchsia;
+
   min-height: 200px;
   width: clamp(50vw, 80vw, 95vw);
   border: 5px solid white;

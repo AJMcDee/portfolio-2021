@@ -85,8 +85,7 @@ const TechStackContainer = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* background: linear-gradient(#131331, #131331 80%, #20332d);
-  @media (max-width: 1200px) { */
+
   padding: 3rem;
 `;
 
@@ -110,6 +109,7 @@ const Logo = styled.div`
 const LogoBox = styled.div`
   min-height: 200px;
   width: 80vw;
+  box-shadow: 0px 0px 5px fuchsia;
 
   border: 5px solid white;
   display: flex;

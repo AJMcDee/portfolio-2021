@@ -26,7 +26,7 @@ function App() {
       <Projects id="ProjectShowcase" />
       <SocialFeed id="SocialFeed" />
       <ContactForm id="ContactForm" />
-      <FinalWord>Designed and Coded by © Anna McDougall, 2021</FinalWord>
+      <FinalWord>Designed and Coded by © Anna McDougall 2021</FinalWord>
     </AppContainer>
   );
 }

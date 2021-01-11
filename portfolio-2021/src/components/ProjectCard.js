@@ -56,6 +56,7 @@ function ProjectCard({
 }
 
 const ProjectCardBox = styled.div`
+  box-shadow: 0px 0px 5px fuchsia;
   min-height: 200px;
   min-width: 50vw;
   width: 80vw;

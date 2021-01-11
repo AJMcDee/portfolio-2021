@@ -143,8 +143,14 @@ const HeaderDiv = styled.header`
 const HoldText = styled.div`
   display: flex;
   flex-direction: column;
+  align-content: center;
+  text-align: center;
   @media (max-width: 768px) {
     margin-top: 3vh;
+  }
+  @media (min-width: 1200px) {
+    text-align: left;
+    align-content: flex-start;
   }
 `;
 

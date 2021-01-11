@@ -10,9 +10,9 @@ function AboutMe() {
           <iframe
             title="aboutVideo"
             src="https://www.youtube.com/embed/wZUtacoX_r8"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           />
         </AboutVideo>
         <AboutInfo>
@@ -58,6 +58,8 @@ function AboutMe() {
 }
 
 const AboutBox = styled.div`
+  box-shadow: 0px 0px 5px fuchsia;
+
   min-height: 200px;
   min-width: 50vw;
   max-width: 85vw;
@@ -121,25 +123,6 @@ const AboutVideo = styled.div`
 
   @media (max-width: 768px) {
     padding-bottom: 2rem;
-  }
-`;
-
-const SocialIcons = styled.div`
-  text-align: right;
-  height: 100px;
-  color: white;
-  font-size: 2rem;
-  a {
-    margin: 10px;
-    color: white;
-  }
-
-  svg:hover {
-    color: #8d5a97;
-    cursor: pointer;
-  }
-  @media (min-width: 360px) {
-    font-size: 3rem;
   }
 `;
 

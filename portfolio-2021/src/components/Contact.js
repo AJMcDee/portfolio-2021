@@ -78,6 +78,8 @@ const ContactContainer = styled.div`
 `;
 
 const StyledForm = styled.form`
+  box-shadow: 0px 0px 5px fuchsia;
+
   background-color: black;
   border: 4px solid white;
   padding: 2rem;
