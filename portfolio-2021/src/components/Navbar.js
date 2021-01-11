@@ -3,13 +3,16 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 function Navigation() {
-  const [navExpand, setNavExpand] = useState("none");
-  const handleScroll = () => {
+  const [navExpand, setNavExpand] = useState("hidden");
+  const [fadeEffect, setFadeEffect] = useState("");
+  const handleScroll = async () => {
     const offset = window.scrollY;
     if (offset > 200) {
-      setNavExpand("flex");
+      setFadeEffect("fade-in");
+      setNavExpand("visible");
     } else {
-      setNavExpand("none");
+      setFadeEffect("fade-out");
+      await setTimeout(() => setNavExpand("hidden"), 1500);
     }
   };
 
@@ -19,28 +22,14 @@ function Navigation() {
 
   return (
     <>
-      <style type="text/css">
-        {`
-      .navbar-anna {
-         position: sticky;
-         box-shadow: 0px 0px 30px #b87700;
-         padding: 1rem;
-         background-color: #131529;
-         display: ${navExpand};
-    }
-    `}
-      </style>
-      <Navbar
-        collapseOnSelect
-        variant="dark"
-        bg="dark"
-        expand="lg"
-        fixed="top"
-        style={{ display: navExpand }}
-      >
+      <Navbar collapseOnSelect variant="dark" bg="dark" expand="lg" fixed="top">
         <Navbar.Brand
           href="#top"
-          style={{ fontFamily: `"Staatliches", sans-serif` }}
+          style={{
+            fontFamily: `"Staatliches", sans-serif`,
+            visibility: navExpand,
+          }}
+          className={fadeEffect}
         >
           Anna McDougall
         </Navbar.Brand>

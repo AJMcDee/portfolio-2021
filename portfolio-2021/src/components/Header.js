@@ -117,7 +117,7 @@ const SocialIcons = styled.div`
 `;
 
 const HeaderDiv = styled.header`
-  padding-top: 10px;
+  padding-top: 40px;
   background-size: cover;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(${bgImage});

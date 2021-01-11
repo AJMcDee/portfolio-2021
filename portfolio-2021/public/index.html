@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="AM.png" type="image/x-icon" />
+    <link rel="icon" href="AM.png" type="image/png" />
+    <link rel="icon" href="AM.png" type="image/x-icon" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -38,6 +41,30 @@
       span,
       label {
         color: white;
+      }
+      .fade-out {
+        animation: fadeout 2s forwards;
+      }
+
+      @keyframes fadeout {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+      .fade-in {
+        animation: fadein 2s forwards;
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
     </style>
   </head>
