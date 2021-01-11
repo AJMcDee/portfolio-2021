@@ -36,7 +36,11 @@ const AppContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5) 25%,
+      rgba(0, 0, 0, 0.7) 100%
+    ),
     url(${bgImage});
   background-repeat: repeat-y;
   background-attachment: fixed;

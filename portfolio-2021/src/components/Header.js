@@ -119,7 +119,11 @@ const SocialIcons = styled.div`
 const HeaderDiv = styled.header`
   padding-top: 40px;
   background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.3) 70%,
+      rgba(0, 0, 0, 0) 100%
+    ),
     url(${bgImage});
   background-repeat: no-repeat;
   background-attachment: fixed;
