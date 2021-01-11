@@ -11,7 +11,6 @@ function SingleCardCarousel({ currentItem, handleClick, animationDisplay }) {
       <FontAwesomeIcon
         title="Previous"
         icon={faChevronLeft}
-        style={{ color: "white", fontSize: "1rem", cursor: "pointer" }}
         onClick={handleClick}
       />
       <Card>
@@ -19,7 +18,6 @@ function SingleCardCarousel({ currentItem, handleClick, animationDisplay }) {
           <CardImg
             alt={currentItem.item.title}
             src={currentItem.item.social_image}
-            style={{ cursor: "pointer" }}
             width="258px"
             height="136px"
             className={animationDisplay}
@@ -29,7 +27,7 @@ function SingleCardCarousel({ currentItem, handleClick, animationDisplay }) {
       <FontAwesomeIcon
         title="Next"
         icon={faChevronRight}
-        style={{ color: "white", fontSize: "1rem", cursor: "pointer" }}
+        style={{}}
         onClick={handleClick}
       />
     </CarouselContainer>
@@ -82,6 +80,15 @@ const CarouselContainer = styled.div`
   width: 320px;
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 700px;
+  }
+
+  svg {
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    @media (min-width: 1024px) {
+      font-size: 3rem;
+    }
   }
 `;
 
