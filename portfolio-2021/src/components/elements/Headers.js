@@ -39,6 +39,10 @@ const HeaderH2 = styled.h2.attrs((props) => ({
     text-shadow: 0px 0px 3px black;
   }
 
+  @-moz-document url-prefix() {
+    -webkit-text-stroke: unset;
+  }
+
   &.typing {
     padding-bottom: 0;
     font-size: 1.1rem;

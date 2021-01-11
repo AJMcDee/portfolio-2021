@@ -15,6 +15,9 @@ const StyledLink = styled.a`
     color: black;
     text-decoration: none;
   }
+  &.blink {
+    animation: blink 2s linear;
+  }
 `;
 
 export default ItemLink;

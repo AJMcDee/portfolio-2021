@@ -120,7 +120,6 @@ const HeaderDiv = styled.header`
   padding-bottom: 10vh;
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: space-around;
   align-items: center;
 
@@ -143,6 +142,7 @@ const HoldText = styled.div`
 `;
 
 const LinkBox = styled.div`
+  text-align: center;
   margin-top: 1rem;
   min-height: 180px;
   max-width: 85vw;

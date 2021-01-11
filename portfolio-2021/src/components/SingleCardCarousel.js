@@ -5,14 +5,14 @@ import {
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
-function SingleCardCarousel({ currentItem, handlePrev, handleNext }) {
+function SingleCardCarousel({ currentItem, handleClick }) {
   return (
     <CarouselContainer>
       <FontAwesomeIcon
-        title="Previous Post"
+        title="Previous"
         icon={faChevronLeft}
         style={{ color: "white", fontSize: "1rem" }}
-        onClick={handlePrev}
+        onClick={handleClick}
       />
       <Card>
         <a href={currentItem.item.url} target="_blank" rel="noreferrer">
@@ -26,10 +26,10 @@ function SingleCardCarousel({ currentItem, handlePrev, handleNext }) {
         </a>
       </Card>
       <FontAwesomeIcon
-        title="Next Post"
+        title="Next"
         icon={faChevronRight}
         style={{ color: "white", fontSize: "1rem" }}
-        onClick={handleNext}
+        onClick={handleClick}
       />
     </CarouselContainer>
   );

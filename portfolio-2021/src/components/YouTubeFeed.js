@@ -47,17 +47,15 @@ function YouTubeFeed() {
     getPosts();
   }, []);
 
-  function handleNext() {
+  function handleClick(e) {
     const currentIndex = currentItem.index;
-    const newIndex = (currentIndex + 1) % itemList.length;
-
-    setCurrentItem({ item: { ...itemList[newIndex] }, index: newIndex });
-  }
-
-  function handlePrev() {
-    const currentIndex = currentItem.index;
-    const newIndex =
-      currentIndex === 0 ? itemList.length - 1 : currentIndex - 1;
+    const movement = e.target.textContent;
+    let newIndex;
+    if (movement === "Next") {
+      newIndex = (currentIndex + 1) % itemList.length;
+    } else {
+      newIndex = currentIndex === 0 ? itemList.length - 1 : currentIndex - 1;
+    }
     setCurrentItem({ item: { ...itemList[newIndex] }, index: newIndex });
   }
 
@@ -65,11 +63,7 @@ function YouTubeFeed() {
     <BlogFeedContainer>
       <HeaderH3>YouTube Feed</HeaderH3>
 
-      <SingleCardCarousel
-        currentItem={currentItem}
-        handleNext={handleNext}
-        handlePrev={handlePrev}
-      />
+      <SingleCardCarousel currentItem={currentItem} handleClick={handleClick} />
       <ItemLink currentItem={currentItem} ButtonText="Watch Video" />
     </BlogFeedContainer>
   );
