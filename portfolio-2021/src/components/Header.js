@@ -161,9 +161,12 @@ const LinkBox = styled.div`
   justify-content: center;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  /* background: black; */
+
   @media (min-width: 1024px) {
     max-width: 40vw;
+  }
+  @-moz-document url-prefix() {
+    background: black;
   }
 `;
 

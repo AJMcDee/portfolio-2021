@@ -7,7 +7,7 @@ const HeaderH1 = styled.h1.attrs((props) => ({
   color: white;
   font-size: 2.3rem;
   -webkit-text-stroke: 1px black;
-  text-shadow: 0px 0px 1px black;
+  text-shadow: 0px 0px 3px lime;
 
   @media (min-width: 360px) {
     font-size: 3rem;
@@ -15,13 +15,13 @@ const HeaderH1 = styled.h1.attrs((props) => ({
   @media (min-width: 768px) {
     font-size: 6.5rem;
     -webkit-text-stroke: 2px black;
-    text-shadow: 0px 0px 2px black;
+    text-shadow: 0px 0px 5px lime;
   }
   @media (min-width: 1024) {
     font-size: 8rem;
     padding-bottom: 1rem;
     -webkit-text-stroke: 3px black;
-    text-shadow: 0px 0px 3px black;
+    text-shadow: 0px 0px 7px lime;
   }
 `;
 
@@ -31,13 +31,16 @@ const HeaderH2 = styled.h2.attrs((props) => ({
   color: white;
   padding-bottom: 1rem;
   font-size: 3rem;
-  text-shadow: 0px 0px 1px black;
+  text-shadow: 0px 0px 5px aqua;
 
   @media (min-width: 768px) {
+    text-shadow: 0px 0px 7px aqua;
+
     font-size: 3.5rem;
   }
 
   &.typing {
+    background-color: #1a1a1a;
     visibility: visible;
     color: white;
     padding-bottom: 0;
@@ -45,7 +48,8 @@ const HeaderH2 = styled.h2.attrs((props) => ({
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
-    font-family: monospace, "Courier New", Courier;
+    font-family: "Inconsolatas", "Courier New", monospace;
+    text-shadow: none;
     animation: type 3.5s steps(24, end), blink-caret 0.75s step-end infinite;
     @keyframes type {
       from {
