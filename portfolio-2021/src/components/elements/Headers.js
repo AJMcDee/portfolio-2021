@@ -40,7 +40,6 @@ const HeaderH2 = styled.h2.attrs((props) => ({
   }
 
   &.typing {
-    visibility: visible;
     padding-bottom: 0;
     font-size: 1.1rem;
     width: 100%;
@@ -55,10 +54,6 @@ const HeaderH2 = styled.h2.attrs((props) => ({
     @media (min-width: 768px) {
       font-size: 3rem;
     }
-  }
-
-  &.no-display {
-    visibility: hidden;
   }
 
   @keyframes typing {
