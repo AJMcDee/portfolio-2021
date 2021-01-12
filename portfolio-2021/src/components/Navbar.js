@@ -3,11 +3,11 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 function Navigation() {
-  let startingState = window.innerWidth >= 1200 ? "visible" : "hidden";
+  let startingState = window.innerWidth >= 1024 ? "visible" : "hidden";
   const [navExpand, setNavExpand] = useState(startingState);
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (window.innerWidth < 1200) {
+    if (window.innerWidth < 1024) {
       if (offset > 200) {
         setNavExpand("visible");
       } else {

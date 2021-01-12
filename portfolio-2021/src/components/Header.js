@@ -29,7 +29,7 @@ function Header() {
           <StyledEQH>
             <span id="energetic">Energetic. </span>
             <span id="quirky">Quirky. </span>
-            <span id="helpful">Helpful. </span>
+            <span id="friendly">Friendly. </span>
           </StyledEQH>
           <p>
             Anna McDougall is a full-stack developer with a passion for
@@ -85,7 +85,7 @@ const StyledEQH = styled.p`
   #quirky {
     text-shadow: 0px 0px 5px aqua;
   }
-  #helpful {
+  #friendly {
     text-shadow: 0px 0px 5px fuchsia;
   }
 `;
