@@ -39,6 +39,7 @@ const HeaderH2 = styled.h2.attrs((props) => ({
     font-size: 3.5rem;
   }
 
+  // Add CSS typing effect
   &.typing {
     visibility: visible;
     color: white;
@@ -47,7 +48,7 @@ const HeaderH2 = styled.h2.attrs((props) => ({
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
-    font-family: "Inconsolatas", "Courier New", monospace;
+    font-family: "Inconsolatas", "Courier New", monospace; // Inconsolatas = similar font to VSCode default
     text-shadow: 0px 0px 2px black;
     animation: type 3.5s steps(24, end), blink-caret 0.75s step-end infinite;
     @keyframes type {

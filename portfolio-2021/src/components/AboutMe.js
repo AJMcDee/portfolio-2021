@@ -9,7 +9,7 @@ function AboutMe() {
         <AboutVideo>
           <iframe
             title="aboutVideo"
-            src="https://www.youtube.com/embed/wZUtacoX_r8"
+            src="https://www.youtube.com/embed/XyjD9yTL20Q"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -20,8 +20,9 @@ function AboutMe() {
             <p>
               I am a passionate, high-energy, and friendly developer who was
               born in Austraila but has lived in Germany since 2015. From asking
-              for a "poota" as a toddler and learning HTML at age 8, I have
-              always been fascinated with the world of technology.
+              for a "poota" as a toddler to learning HTML at age 8 and then
+              working with CSS and HTML in the field of digital marketing, I
+              have always been fascinated by technology.
             </p>
             <p>
               In 2021, I will graduate from a one-year course of study

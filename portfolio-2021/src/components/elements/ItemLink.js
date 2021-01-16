@@ -14,11 +14,16 @@ const StyledLink = styled.a`
   color: white;
   padding: 5px;
   font-size: 1.2rem;
+
   &:hover {
     background-color: white;
     color: black;
     text-decoration: none;
   }
+
+  // Creation of two blink animations
+  // to allow for clean reset of animation effect
+  // on fast clicking
   &.blink {
     animation: blink 2s linear;
   }
