@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.423b2929.chunk.js",
-    "main.js.map": "/static/js/main.423b2929.chunk.js.map",
+    "main.js": "/static/js/main.e03f83fb.chunk.js",
+    "main.js.map": "/static/js/main.e03f83fb.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9500fbf0.js",
     "runtime-main.js.map": "/static/js/runtime-main.9500fbf0.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/static/css/2.20aa2d7b.chunk.css",
@@ -12,6 +12,8 @@
     "index.html": "/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/static/css/2.20aa2d7b.chunk.css.map",
     "static/js/2.ddde9f11.chunk.js.LICENSE.txt": "/static/js/2.ddde9f11.chunk.js.LICENSE.txt",
+    "static/media/ajmbanking.25b45c6e.png": "/static/media/ajmbanking.25b45c6e.png",
+    "static/media/ajmbankingPortrait.2cf56656.png": "/static/media/ajmbankingPortrait.2cf56656.png",
     "static/media/beats.c966e8bb.png": "/static/media/beats.c966e8bb.png",
     "static/media/beatsPortrait.b08b26fe.png": "/static/media/beatsPortrait.b08b26fe.png",
     "static/media/bennys.73b91ff3.png": "/static/media/bennys.73b91ff3.png",
@@ -19,7 +21,7 @@
     "static/media/bg-purple-abstract.d86c5117.jpg": "/static/media/bg-purple-abstract.d86c5117.jpg",
     "static/media/expressLogo.8dad5884.png": "/static/media/expressLogo.8dad5884.png",
     "static/media/portfolio-page.04c4f6ed.png": "/static/media/portfolio-page.04c4f6ed.png",
-    "static/media/portfolio-pagePortrait.dafb8024.png": "/static/media/portfolio-pagePortrait.dafb8024.png",
+    "static/media/portfolio-pagePortrait.b2d7a8af.png": "/static/media/portfolio-pagePortrait.b2d7a8af.png",
     "static/media/tic-tac-toe.540fa691.png": "/static/media/tic-tac-toe.540fa691.png",
     "static/media/tic-tac-toePortrait.d5c7e88f.png": "/static/media/tic-tac-toePortrait.d5c7e88f.png",
     "static/media/webpackLogo.e9b18682.png": "/static/media/webpackLogo.e9b18682.png"
@@ -28,6 +30,6 @@
     "static/js/runtime-main.9500fbf0.js",
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.ddde9f11.chunk.js",
-    "static/js/main.423b2929.chunk.js"
+    "static/js/main.e03f83fb.chunk.js"
   ]
 }
