@@ -37,7 +37,7 @@ function AboutMe() {
               To this day, I still love being on stage. Nowadays, that stage
               tends to be based on podcasts, conferences, bootcamp speaker
               sessions, and blogs. I love being able to use my stage abilities
-              to talk about technology and programmig in a passionate and
+              to talk about technology and programming in a passionate and
               motivating way.
             </p>
             <p>
