@@ -50,9 +50,13 @@ function ProjectCard({
             <StyledLink href={projectLink} target="_blank" rel="noreferrer">
               View Deployment
             </StyledLink>
-            <StyledLink href={githubLink} target="_blank" rel="noreferrer">
-              View on GitHub
-            </StyledLink>
+            {githubLink ? (
+              <StyledLink href={githubLink} target="_blank" rel="noreferrer">
+                View on GitHub
+              </StyledLink>
+            ) : (
+              ""
+            )}
           </ButtonBox>
         </TextBox>
       </StyledCard>
