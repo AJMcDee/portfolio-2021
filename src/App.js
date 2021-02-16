@@ -1,16 +1,20 @@
 import Navigation from "./components/Navbar";
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
-import TechStack from "./components/TechStack";
+
 import styled from "styled-components";
 import ContactForm from "./components/Contact";
 import SocialFeed from "./components/SocialFeed";
 import bgImage from "./img/bg-purple-abstract.jpg";
-import Projects from "./components/Projects";
-import projectInfo from "./projectInfo";
+
 import Showcase from "./components/Showcase";
 import FinalWord from "./components/FinalWord";
 import speakingInfo from "./speakingInfo";
+
+// Currently not in use
+//import Projects from "./components/Projects";
+// import projectInfo from "./projectInfo";
+// import TechStack from "./components/TechStack";
 
 function App() {
   return (

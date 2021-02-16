@@ -4,7 +4,7 @@ import SocialIcons from "./SocialIcons";
 
 function HeaderInfoBox() {
   return (
-    <LinkBox>
+    <InfoBox>
       <BrandWords />
       <AboutText>
         <p>
@@ -19,11 +19,11 @@ function HeaderInfoBox() {
         </p>
       </AboutText>
       <SocialIcons />
-    </LinkBox>
+    </InfoBox>
   );
 }
 
-const LinkBox = styled.div`
+const InfoBox = styled.div`
   text-align: center;
   margin-top: 1rem;
   min-height: 180px;
@@ -39,7 +39,7 @@ const LinkBox = styled.div`
 
   @media (min-width: 1024px) {
     max-width: 40vw;
-    padding: 10px;
+    padding: 20px;
   }
   @-moz-document url-prefix() {
     background: black;

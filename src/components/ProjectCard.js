@@ -48,7 +48,7 @@ function ProjectCard({
           <p>{description}</p>
           <ButtonBox>
             <StyledLink href={projectLink} target="_blank" rel="noreferrer">
-              View Deployment
+              View Online
             </StyledLink>
             {githubLink ? (
               <StyledLink href={githubLink} target="_blank" rel="noreferrer">
