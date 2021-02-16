@@ -8,25 +8,23 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styled from "styled-components";
+import BrandWords from "./BrandWords";
 
 function HeaderInfoBox() {
   return (
     <LinkBox>
+      <BrandWords />
       <AboutText>
-        <StyledEQH>
-          <span id="energetic">Energetic. </span>
-          <span id="quirky">Quirky. </span>
-          <span id="friendly">Friendly. </span>
-        </StyledEQH>
         <p>
           Anna McDougall is a full-stack developer with a passion for
           JavaScript. She is known as "that dev who used to be an opera singer".
         </p>
 
         <p>
-          In addition to her upcoming position as Junior Software Engineer at
-          Novatec Consulting GmbH, Anna also enjoys blogging, creating YouTube
-          videos, and speaking at events.
+          In addition to her upcoming position as Junior Software Engineer at{" "}
+          <a href="https://www.novatec-gmbh.de/">Novatec Consulting GmbH</a>,
+          Anna also enjoys blogging, creating YouTube videos, and speaking at
+          events.
         </p>
       </AboutText>
       <SocialIcons>
@@ -59,23 +57,6 @@ function HeaderInfoBox() {
   );
 }
 
-const StyledEQH = styled.p`
-  padding-top: 1rem;
-  * {
-    font-family: "Staatliches", sans-serif;
-    font-size: 2.1rem;
-  }
-  #energetic {
-    text-shadow: 0px 0px 5px yellow;
-  }
-  #quirky {
-    text-shadow: 0px 0px 5px aqua;
-  }
-  #friendly {
-    text-shadow: 0px 0px 5px fuchsia;
-  }
-`;
-
 const LinkBox = styled.div`
   text-align: center;
   margin-top: 1rem;
@@ -102,6 +83,10 @@ const LinkBox = styled.div`
 const AboutText = styled.p`
   p {
     font-size: 1em;
+    a {
+      color: white;
+      text-decoration: underline;
+    }
     @media (min-width: 768px) {
       font-size: 1.2em;
     }
