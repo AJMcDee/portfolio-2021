@@ -15,8 +15,7 @@ function HeaderInfoBox() {
         <p>
           In addition to her upcoming position as Junior Software Engineer at{" "}
           <a href="https://www.novatec-gmbh.de/">Novatec Consulting GmbH</a>,
-          Anna also enjoys blogging, creating YouTube videos, and speaking at
-          events.
+          Anna is also a tech blogger, YouTube creator, and public speaker.
         </p>
       </AboutText>
       <SocialIcons />
