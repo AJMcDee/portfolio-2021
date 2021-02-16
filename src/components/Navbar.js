@@ -42,13 +42,17 @@ function Navigation() {
               About
             </Nav.Link>
 
-            <Nav.Link className="text-light" href="#TechStack">
+            <Nav.Link href="#SpeakingShowcase" className="text-light">
+              Public Speaking
+            </Nav.Link>
+
+            {/* <Nav.Link className="text-light" href="#TechStack">
               Tech Stack
             </Nav.Link>
 
             <Nav.Link className="text-light" href="#ProjectShowcase">
               Projects
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link className="text-light" href="#SocialFeed">
               Social Feed
             </Nav.Link>

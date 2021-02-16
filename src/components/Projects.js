@@ -3,26 +3,32 @@ import styled from "styled-components";
 import { HeaderH2 } from "./elements/Headers";
 import ProjectCard from "./ProjectCard";
 import projectInfo from "../projectInfo";
+import Showcase from "./Showcase";
 
 function Projects() {
   return (
-    <ProjectsContainer id="ProjectShowcase">
-      <HeaderH2>Project Showcase</HeaderH2>
+    <Showcase
+      showcaseTitle="Project Showcase"
+      showcaseInfo={projectInfo.projects}
+    />
 
-      {projectInfo.projects.reverse().map((project) => {
-        return (
-          <ProjectCard
-            title={project.title}
-            projectLink={project.projectLink}
-            imageLandscape={project.imageLandscape}
-            imagePortrait={project.imagePortrait}
-            description={project.description}
-            githubLink={project.githubLink}
-            stack={project.stack}
-          />
-        );
-      })}
-    </ProjectsContainer>
+    // <ProjectsContainer id="ProjectShowcase">
+    //   <HeaderH2>Project Showcase</HeaderH2>
+
+    //   {projectInfo.projects.reverse().map((project) => {
+    //     return (
+    //       <ProjectCard
+    //         title={project.title}
+    //         projectLink={project.projectLink}
+    //         imageLandscape={project.imageLandscape}
+    //         imagePortrait={project.imagePortrait}
+    //         description={project.description}
+    //         githubLink={project.githubLink}
+    //         stack={project.stack}
+    //       />
+    //     );
+    //   })}
+    // </ProjectsContainer>
   );
 }
 

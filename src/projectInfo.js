@@ -24,29 +24,6 @@ const projectInfo = {
       stack: ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "npm"],
     },
     {
-      projectId: 1,
-      title: "Tic-Tac-Toe",
-      projectLink: "https://ajmcdee.github.io/TicTacToe/",
-      githubLink: "https://github.com/AJMcDee/TicTacToe",
-      imageLandscape: tttPreview,
-      imagePortrait: tttPreviewPortrait,
-      description: `A classic Tic-Tac-Toe game with the option of two players or vs the Computer AI. 
-        
-        This was one of my first JavaScript projects and I programmed the logic entirely alone, using a series of arrays to evaluate the relative positioning of each move.`,
-      stack: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-      projectId: 2,
-      title: "Benny's Burger",
-      projectLink: "https://ajmcdee.github.io/BennysBurgers-Bootstrap/",
-      githubLink: "https://github.com/AJMcDee/BennysBurgers-Bootstrap",
-      imageLandscape: bbPreview,
-      imagePortrait: bbPreviewPortrait,
-      description:
-        "An example business page for a small burger restaurant, based on a specified design. The goal of this project was to effectively utilise Bootstrap for a whole-page layout, combining it with Sass mix-ins and custom styling to achieve specificity while adding responsiveness in the areas where Bootstrap is limited.",
-      stack: ["HTML", "CSS", "Bootstrap", "Sass", "npm"],
-    },
-    {
       projectId: 4,
       title: "Beats and Waves",
       projectLink: "https://ajmcdee.github.io/react-music-player/",

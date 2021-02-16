@@ -7,13 +7,10 @@ import ContactForm from "./components/Contact";
 import SocialFeed from "./components/SocialFeed";
 import bgImage from "./img/bg-purple-abstract.jpg";
 import Projects from "./components/Projects";
-
-// TODO:
-// - Clean up styling (ensure consistency)
-// - Reorder imports to make sense
-// - Comment code
-
-// Universal Styling
+import projectInfo from "./projectInfo";
+import Showcase from "./components/Showcase";
+import FinalWord from "./components/FinalWord";
+import speakingInfo from "./speakingInfo";
 
 function App() {
   return (
@@ -21,12 +18,22 @@ function App() {
       <Navigation />
       <Header />
       <AboutMe id="AboutMe" />
-      <TechStack id="TechStack" />
 
-      <Projects id="ProjectShowcase" />
+      {/* <TechStack id="TechStack" /> */}
+
+      {/* // Below showcase for portfolio projects
+      <Showcase
+        showcaseTitle="Project Showcase"
+        showcaseInfo={projectInfo.projects}
+      /> */}
+      <Showcase
+        showcaseTitle="Speaking Showcase"
+        showcaseInfo={speakingInfo.engagements}
+        id="SpeakingShowcase"
+      />
       <SocialFeed id="SocialFeed" />
       <ContactForm id="ContactForm" />
-      <FinalWord>Designed and Coded by © Anna McDougall 2021</FinalWord>
+      <FinalWord />
     </AppContainer>
   );
 }
@@ -46,15 +53,4 @@ const AppContainer = styled.div`
   background-attachment: fixed;
 `;
 
-const FinalWord = styled.p`
-  font-size: 1.1rem;
-  color: white;
-  padding: 3rem;
-  align-self: center;
-  text-align: center;
-  text-shadow: 0px 0px 4px black;
-  @media (min-width: 768px) {
-    align-self: flex-end;
-  }
-`;
 export default App;
