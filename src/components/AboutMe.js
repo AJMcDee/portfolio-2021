@@ -9,7 +9,7 @@ function AboutMe() {
         <AboutVideo>
           <iframe
             title="aboutVideo"
-            src="https://www.youtube.com/watch?v=FWpXa9sVFzw"
+            src="https://www.youtube.com/embed/FWpXa9sVFzw"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
