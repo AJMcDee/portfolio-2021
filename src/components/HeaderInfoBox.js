@@ -20,13 +20,13 @@ function HeaderInfoBox() {
         </StyledEQH>
         <p>
           Anna McDougall is a full-stack developer with a passion for
-          JavaScript.
+          JavaScript. She is known as "that dev who used to be an opera singer".
         </p>
 
         <p>
-          Now, she seeks the next adventure: a career in which her expertise and
-          enthusiasm can help drive a great product and contribute to a great
-          team.
+          In addition to her upcoming position as Junior Software Engineer at
+          Novatec Consulting GmbH, Anna also enjoys blogging, creating YouTube
+          videos, and speaking at events.
         </p>
       </AboutText>
       <SocialIcons>
@@ -92,6 +92,7 @@ const LinkBox = styled.div`
 
   @media (min-width: 1024px) {
     max-width: 40vw;
+    padding: 10px;
   }
   @-moz-document url-prefix() {
     background: black;
