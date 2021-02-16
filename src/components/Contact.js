@@ -68,9 +68,6 @@ function ContactForm() {
 
 const ContactContainer = styled.div`
   padding: 3rem 0 8rem 0;
-  background-color: #131529;
-  box-shadow: 0px 0px 30px #b87700;
-
   display: flex;
   flex-direction: column;
   justify-content: center;

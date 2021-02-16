@@ -51,6 +51,11 @@ const AppContainer = styled.div`
     url(${bgImage});
   background-repeat: repeat-y;
   background-attachment: fixed;
+
+  & > section:nth-child(odd) {
+    box-shadow: 0px 0px 30px #b87700;
+    background-color: #131529;
+  }
 `;
 
 export default App;
