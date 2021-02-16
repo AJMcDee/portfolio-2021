@@ -9,7 +9,7 @@ function AboutMe() {
         <AboutVideo>
           <iframe
             title="aboutVideo"
-            src="https://www.youtube.com/embed/XyjD9yTL20Q"
+            src="https://www.youtube.com/watch?v=FWpXa9sVFzw"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -20,36 +20,29 @@ function AboutMe() {
             <p>
               I am a passionate, high-energy, and friendly developer who was
               born in Austraila but has lived in Germany since 2015. From asking
-              for a "poota" as a toddler to learning HTML at age 8 and then
-              working with CSS and HTML in the field of digital marketing, I
-              have always been fascinated by technology.
+              for a "poota" as a toddler and learning HTML at age 8, to working
+              in digital marketing and now software engineering, I have always
+              been fascinated by technology.
             </p>
             <p>
-              In 2021, I will graduate from a one-year course of study
-              (Weiterbildung) in Web- and Software Development from Digital
-              Career Institute in Leipzig, Germany. Not only have I excelled
-              academically, but I also pride myself in working to lift up the
-              other students both through her role as Class Tutor and as Class
-              Representative.
+              In 2021, I began my career in software engineering just one year
+              after deciding to change careers into tech. In addition to my
+              corporate work, I also spent 7 years as a professional opera
+              singer, performing on stages around the world. It is my belief
+              that being an opera singer prepared me for a programming career,
+              and I have written and spoken often about this unusual transition.
+            </p>
+
+            <p>
+              To this day, I still love being on stage. Nowadays, that stage
+              tends to be based on podcasts, conferences, bootcamp speaker
+              sessions, and blogs. I love being able to use my stage abilities
+              to talk about technology and programmig in a passionate and
+              motivating way.
             </p>
             <p>
-              My skills revolve around the MERN stack: MongoDB, Express, React,
-              and Node. Naturally, this comes in addition to strong abilities in
-              HTML, CSS, and JavaScript (ECMAScript 6). I speak German at a
-              business-fluent level (approx. C1) and Spanish at an
-              upper-intermediate (approx. B2) level.
-            </p>
-            <p>
-              In addition to my training and work experience, I also bring an
-              unending enthusiasm and passion for technology and JavaScript, as
-              well as for lifting up others around me. Not only do I write a
-              comprehensive <a href="http://blog.annamcdougall.com">blog</a> on
-              relevant technical and workplace topics, but I also produce videos
-              on{" "}
-              <a href="https://www.youtube.com/channel/UCjJzKrbr3WGn1xE0LAQ91yA">
-                my YouTube channel
-              </a>
-              , mainly aimed at beginners to programming and JavaScript.
+              Interested in having me talk at your event? Please fill out the{" "}
+              <a href="#ContactForm">Contact Form</a>.
             </p>
           </AboutText>
         </AboutInfo>
