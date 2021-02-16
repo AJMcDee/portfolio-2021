@@ -31,11 +31,16 @@ function ProjectCard({
     <ProjectCardBox>
       <StyledCard>
         <HeaderH3 style={{ gridArea: "header" }}>{title}</HeaderH3>
-        <LogoBox>
-          {stack.map((item) => {
-            return <StackLogo stack={item} />;
-          })}
-        </LogoBox>
+        {stack ? (
+          <LogoBox>
+            {stack.map((item) => {
+              return <StackLogo stack={item} />;
+            })}
+          </LogoBox>
+        ) : (
+          ""
+        )}
+
         <ImageLink href={projectLink} target="_blank" rel="noreferrer">
           <CardImage src={image} />
         </ImageLink>
