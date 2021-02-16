@@ -1,14 +1,6 @@
-import {
-  faTwitterSquare,
-  faGithubSquare,
-  faLinkedin,
-  faYoutubeSquare,
-} from "@fortawesome/free-brands-svg-icons";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import styled from "styled-components";
 import BrandWords from "./BrandWords";
+import SocialIcons from "./SocialIcons";
 
 function HeaderInfoBox() {
   return (
@@ -27,32 +19,7 @@ function HeaderInfoBox() {
           events.
         </p>
       </AboutText>
-      <SocialIcons>
-        <a
-          href="http://www.twitter.com/AnnaJMcDougall"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FontAwesomeIcon icon={faTwitterSquare} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/annajmcdougall/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a href="https://github.com/AJMcDee" target="_blank" rel="noreferrer">
-          <FontAwesomeIcon icon={faGithubSquare} />
-        </a>
-        <a
-          href="https://www.youtube.com/channel/UCjJzKrbr3WGn1xE0LAQ91yA"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FontAwesomeIcon icon={faYoutubeSquare} />
-        </a>
-      </SocialIcons>
+      <SocialIcons />
     </LinkBox>
   );
 }
@@ -90,23 +57,6 @@ const AboutText = styled.p`
     @media (min-width: 768px) {
       font-size: 1.2em;
     }
-  }
-`;
-const SocialIcons = styled.div`
-  text-align: right;
-  color: white;
-  font-size: 2rem;
-  a {
-    margin: 10px;
-    color: white;
-  }
-
-  svg:hover {
-    color: #8d5a97;
-    cursor: pointer;
-  }
-  @media (min-width: 360px) {
-    font-size: 3rem;
   }
 `;
 
